@@ -32,46 +32,5 @@ const useFormOneStore = create<State & Actions>((set) => ({
 
 
 
-// const useFormOneStore = create<State & Actions>((set) => ({
-//     age: '',
-//     height: '',
-//     weight: '',
-
-
-//     // setAge: (age) => {
-//     //     set({
-//     //         age: age
-//     //     })
-//     // },
-
-//     setAge: (age) => set(() => ({ age: age })),
-//     setHeight: (height) => set(() => ({ height: height })),
-//     setWeight: (weight) => set(() => ({ weight: weight })),
-
-
-//     // setHeight: (height: string) => {
-//     //     set({
-//     //         height: height
-//     //     })
-//     // },
-
-//     // setWeight: (weight: string) => {
-//     //     set({
-//     //         weight: weight
-//     //     })
-//     // },
-//     // setDiseases: (diseases: string) => {
-//     //     set({
-//     //         diseases: diseases
-//     //     })
-//     // },
-//     // setAllergies: (allergies: string) => {
-//     //     set({
-//     //         allergies: allergies
-//     //     })
-//     // }
-
-
-// }))
 
 export default useFormOneStore
