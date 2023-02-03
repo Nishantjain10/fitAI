@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState } from 'react'
+import React, { FormEvent, useState } from 'react'
 import StepFormOne from './StepFormOne';
 import StepFormTwo from "./StepFormTwo";
 import StepFormThree from "./StepFormThree";
@@ -10,7 +10,9 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 
 const Container = () => {
 
-    const forms = [<StepFormOne />, <StepFormTwo />, <StepFormThree />, <StepFormFour />]
+ 
+
+    const forms = [<StepFormOne  />, <StepFormTwo />, <StepFormThree />, <StepFormFour />]
     const [formIndex, setFormIndex] = useState(0)
 
 
