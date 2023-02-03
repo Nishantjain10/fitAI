@@ -61,6 +61,8 @@ const test: FC<testProps> = ({}) => {
     setAnswer(results.result.choices[0].text);
   };
 
+  const html = answer.replace(/\n/g, "<br>");
+
   return (
     <div>
       <div className="flex items-center gap-12 flex-wrap max-w-6xl">
@@ -127,10 +129,10 @@ const test: FC<testProps> = ({}) => {
           Submit
         </Button>
       </div>
-      <p className="text-lg bg-yellow-200 p-12 w-full mt-12">
-        {answer && answer}
-      </p>
-      <div dangerouslySetInnerHTML={{ __html: answer }} />
+      <div
+        className="text-lg bg-blue-200 p-12 w-full mt-12"
+        dangerouslySetInnerHTML={{ __html: html }}
+      />
     </div>
   );
 };
