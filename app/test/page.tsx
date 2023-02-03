@@ -129,6 +129,9 @@ const test: FC<testProps> = ({}) => {
           Submit
         </Button>
       </div>
+      <p className="text-lg bg-yellow-200 p-12 w-full mt-12">
+        {answer && html}
+      </p>
       <div
         className="text-lg bg-blue-200 p-12 w-full mt-12"
         dangerouslySetInnerHTML={{ __html: html }}
