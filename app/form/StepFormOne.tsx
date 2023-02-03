@@ -1,30 +1,30 @@
 import React from 'react'
 import Input from '@mui/material/Input';
 import TextField from '@mui/material/TextField';
-import useFormOneStore from '@/store/formStore';
+import useFormStore from '@/store/formStore';
 
 const StepForm1 = () => {
-    const age = useFormOneStore(state => state.age)
-    const setAge = useFormOneStore(state => state.setAge)
+    
+    const [age, setAge] = useFormStore(state => [state.age, state.setAge])
 
     console.log(age)
 
     return (
         <div className=''>
             <form className='grid grid-cols-3 gap-10'>
-                {/* <input
+                <input
                     type="text"
                     className="border-2"
                     placeholder="Age"
                     onChange={e => setAge(e.target.value)}
-                /> */}
-                <TextField
+                />
+                {/* <TextField
                     type="number"
                     id="outlined-basic"
                     label="Age"
                     variant="outlined"
                     onChange={e => setAge(e.target.value)}
-                />
+                /> */}
 
                 <input
                     type="text"
