@@ -28,18 +28,18 @@ const Hero = () => {
           </defs>
         </svg>
       </div>
-      <div className="hero-title backdrop-filter backdrop-blur-sm text-7xl pt-24 gap-6 font-product font-semibold flex flex-col justify-center items-center">
+      <div className="hero-title backdrop-filter backdrop-blur-sm text-6xl pt-24 gap-6 font-product font-semibold flex flex-col justify-center items-center">
         <span className="">
-          Get your Perfect{" "}
+        Transform your fitness journey with {" "}
           <span className=" text-violet-500 decoration-rose-400 underline-custom">
             {" "}
-            Plans{" "}
+            FitAI:{" "}
           </span>
         </span>
         <span>
-          with The Perfect{" "}
-          <span className="text-violet-500 text-8xl underline-custom">
-            FitAI{" "}
+        The Perfect Fit for Your Perfect {" "}
+          <span className="text-violet-500 text-6xl font-extrabold underline-custom">
+          Plans.{" "}
           </span>
         </span>
         <p className="mt-4 text-xl w-[50%] mx-auto leading-8 text-gray-600 sm:text-center">
