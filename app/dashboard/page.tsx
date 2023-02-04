@@ -211,6 +211,7 @@ const page: React.FC = () => {
           <Link href="/">
             <span className="bg-blue-300 p-2 cursor-pointer text-white rounded-md">
               Login
+              
             </span>
           </Link>
         </p>
