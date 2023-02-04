@@ -1,3 +1,4 @@
+
 import useFormOneStore from '@/store/formStore'
 import React from 'react'
 import Button from '@mui/material/Button';
@@ -27,4 +28,5 @@ const StepForm2 = () => {
     )
 }
 
-export default StepForm2
+
+export default StepForm2;
