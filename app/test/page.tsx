@@ -1,4 +1,5 @@
 "use client";
+
 import { Button, TextField } from "@mui/material";
 import { FC, MouseEvent, useState } from "react";
 
@@ -61,7 +62,7 @@ const test: FC<testProps> = ({}) => {
     setAnswer(results.result.choices[0].text);
   };
 
-  //   const html = answer.replace(/\n/g, "<br>");
+  const html = answer.replace(/\n/g, "<br>");
 
   return (
     <div>
@@ -132,10 +133,10 @@ const test: FC<testProps> = ({}) => {
       <p className="text-lg bg-yellow-200 p-12 w-full mt-12">
         {answer && answer}
       </p>
-      {/* <div
+      <div
         className="text-lg bg-blue-200 p-12 w-full mt-12"
         dangerouslySetInnerHTML={{ __html: html }}
-      /> */}
+      />
     </div>
   );
 };
