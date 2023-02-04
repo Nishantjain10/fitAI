@@ -1,11 +1,11 @@
-import React from "react";
-import Input from "@mui/material/Input";
+import React from 'react'
 import TextField from "@mui/material/TextField";
 import useFormOneStore from "@/store/formStore";
 import { Button } from "@mui/material";
 
 const StepForm1 = () => {
   const [state] = useFormOneStore((state) => [state]);
+
 
   return (
     <div className="">
@@ -43,4 +43,5 @@ const StepForm1 = () => {
   );
 };
 
-export default StepForm1;
+export default StepForm1
+

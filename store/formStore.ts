@@ -6,6 +6,7 @@ type State = {
   weight: string;
   diseases: string;
   allergies: string;
+  seletedType: string
 };
 
 type Actions = {
@@ -14,6 +15,7 @@ type Actions = {
   setWeight: (weight: string) => void;
   setDisease: (diseases: string) => void;
   setAllergies: (allergies: string) => void;
+  setSelectedType: (type: State['seletedType']) => void
 };
 
 const useFormOneStore = create<State & Actions>((set) => ({
@@ -22,12 +24,16 @@ const useFormOneStore = create<State & Actions>((set) => ({
   weight: "",
   diseases: "",
   allergies: "",
+  seletedType: "",
+  
 
   setAge: (age) => set(() => ({ age: age })),
   setHeight: (height) => set(() => ({ height: height })),
   setWeight: (weight) => set(() => ({ weight: weight })),
   setDisease: (diseases) => set(() => ({ diseases: diseases })),
   setAllergies: (allergies) => set(() => ({ allergies: allergies })),
+   setSelectedType: (type) => set(() => ({ seletedType: type }))
 }));
 
 export default useFormOneStore;
+
