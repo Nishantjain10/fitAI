@@ -1,62 +1,46 @@
-import React from 'react'
-import Input from '@mui/material/Input';
-import TextField from '@mui/material/TextField';
-import useFormOneStore from '@/store/formStore';
+import React from "react";
+import Input from "@mui/material/Input";
+import TextField from "@mui/material/TextField";
+import useFormOneStore from "@/store/formStore";
+import { Button } from "@mui/material";
 
 const StepForm1 = () => {
-    const age = useFormOneStore(state => state.age)
-    const setAge = useFormOneStore(state => state.setAge)
+  const [state] = useFormOneStore((state) => [state]);
 
-    console.log(age)
+  return (
+    <div className="">
+      <TextField
+        value={state.weight}
+        onChange={(e) => state.setWeight(e.target.value)}
+        label="weight"
+        variant="outlined"
+      />
+      <TextField
+        value={state.height}
+        onChange={(e) => state.setHeight(e.target.value)}
+        label="height"
+        variant="outlined"
+      />
+      <TextField
+        value={state.age}
+        onChange={(e) => state.setAge(e.target.value)}
+        label="age"
+        variant="outlined"
+      />
+      <TextField
+        value={state.diseases}
+        onChange={(e) => state.setDisease(e.target.value)}
+        label="diseases"
+        variant="outlined"
+      />
+      <TextField
+        value={state.allergies}
+        onChange={(e) => state.setAllergies(e.target.value)}
+        label="allergies"
+        variant="outlined"
+      />
+    </div>
+  );
+};
 
-    return (
-        <div className=''>
-            <form className='grid grid-cols-3 gap-10'>
-                {/* <input
-                    type="text"
-                    className="border-2"
-                    placeholder="Age"
-                    onChange={e => setAge(e.target.value)}
-                /> */}
-                <TextField
-                    type="number"
-                    id="outlined-basic"
-                    label="Age"
-                    variant="outlined"
-                    onChange={e => setAge(e.target.value)}
-                />
-
-                <input
-                    type="text"
-                    className="border-2"
-                    placeholder="Height" />
-                <input
-                    type="text"
-                    className="border-2"
-                    placeholder="Weight" />
-                <input
-                    type="text"
-                    className="border-2"
-                    placeholder="Diseases" />
-                <input
-                    type="text"
-                    className="border-2"
-                    placeholder="Allergies" />
-            </form>
-            {/* 
-            <FormControl variant="standard" sx={{ m: 1, mt: 3, width: '25ch' }}>
-                <Input
-                    id="standard-adornment-weight"
-                    endAdornment={<InputAdornment position="end">kg</InputAdornment>}
-                    aria-describedby="standard-weight-helper-text"
-                    inputProps={{
-                        'aria-label': 'weight',
-                    }}
-                />
-                <FormHelperText id="standard-weight-helper-text">Weight</FormHelperText>
-            </FormControl> */}
-        </div>
-    )
-}
-
-export default StepForm1
+export default StepForm1;
