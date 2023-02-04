@@ -32,3 +32,6 @@ body {
     background-size: cover;
 
 }
+.isActiveButton:active {
+    background-color: aqua;
+}
