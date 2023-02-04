@@ -10,6 +10,7 @@ import "react-circular-progressbar/dist/styles.css";
 import { useRouter } from "next/navigation";
 import useFormOneStore from "@/store/formStore";
 
+
 const Container = () => {
   const [state] = useFormOneStore((state) => [state]);
 
@@ -19,6 +20,7 @@ const Container = () => {
     <StepFormThree />,
     <StepFormFour />,
   ];
+  const state = useFormOneStore()
   const [formIndex, setFormIndex] = useState(0);
   const route = useRouter();
 
@@ -31,6 +33,21 @@ const Container = () => {
   };
 
   const changePercent = () => {
+    percentage = 100
+  }
+
+  // const enableNext = (formIndex === 2 && state.selectedPlan) ?  false : true
+
+  // console.log(enableNext)
+
+
+  let percentage = (formIndex) / 4 * 100
+  const handleClick = () => {
+    changePercent()
+    setTimeout(() => {
+      route.push('/')
+    }, 3000)
+  }
     percentage = 100;
   };
 
@@ -82,19 +99,14 @@ const Container = () => {
         {formIndex === 3 ? (
           <button
             onClick={handleClick}
-            className="absolute right-[90px] bottom-10 cursor-pointer bg-black px-4 py-2 text-white"
-          >
-            Finish
-          </button>
-        ) : (
-          <button
-            className="absolute right-[90px] bottom-10 cursor-pointer bg-black px-4 py-2 text-white"
-            onClick={handleRightClick}
-          >
-            Next
-          </button>
-        )}
-
+            className="  absolute right-[90px] bottom-10 cursor-pointer bg-black px-4 py-2 text-white"
+          >Finish</button>
+          :
+          <button 
+            className=" absolute right-[90px] bottom-10 cursor-pointer bg-black px-4 py-2 text-white"
+            onClick={handleRightClick
+            }>Next</button>
+        }
         <button
           className="absolute left-[90px] bottom-10 cursor-pointer bg-black px-4 py-2 text-white"
           onClick={handleLeftClick}
