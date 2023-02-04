@@ -1,4 +1,5 @@
 "use client";
+
 import { Button, TextField } from "@mui/material";
 import { FC, MouseEvent, useState } from "react";
 
@@ -129,6 +130,9 @@ const test: FC<testProps> = ({}) => {
           Submit
         </Button>
       </div>
+      <p className="text-lg bg-yellow-200 p-12 w-full mt-12">
+        {answer && answer}
+      </p>
       <div
         className="text-lg bg-blue-200 p-12 w-full mt-12"
         dangerouslySetInnerHTML={{ __html: html }}
