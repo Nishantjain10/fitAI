@@ -7,7 +7,7 @@ import ButtonGroup from '@mui/material/ButtonGroup';
 const StepForm2 = () => {
 
     const [selectedType, setSelectedType] = useFormOneStore(state => [
-        state.seletedType,
+        state.selectedType,
         state.setSelectedType
     ])
 
