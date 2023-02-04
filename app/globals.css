@@ -3,8 +3,31 @@
 @tailwind utilities;
 
 
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
+
+@font-face {
+    font-family: "Satoshi";
+    src: url('../public/fonts/Satoshi.ttf');
+}
+
+.underline-custom{
+    position: relative;
+}
+
+.underline-custom::after {
+    content: '';
+    position: absolute;
+    bottom: -0.125rem;
+    left: -0.5rem;
+    right: -0.5rem;
+    height: 0.75rem;
+    z-index: -1;
+    background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
