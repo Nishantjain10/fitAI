@@ -7,6 +7,7 @@ type State = {
     diseases: string;
     allergies: string
     seletedType: string
+    selectedPlan: string
 }
 
 type Actions = {
@@ -16,6 +17,7 @@ type Actions = {
     setDisease: (diseases: State['diseases']) => void
     setAllergies: (allergies: State['allergies']) => void
     setSelectedType: (type: State['seletedType']) => void
+    setSelectedPlan: (plan: State['selectedPlan']) => void
 }
 
 const useFormStore = create<State & Actions>((set) => ({
@@ -25,13 +27,15 @@ const useFormStore = create<State & Actions>((set) => ({
     diseases: '',
     allergies: '',
     seletedType: '',
+    selectedPlan: '',
 
     setAge: (age) => set(() => ({ age: age })),
     setHeight: (height) => set(() => ({ height: height })),
     setWeight: (weight) => set(() => ({ weight: weight })),
     setDisease: (diseases) => set(() => ({ diseases: diseases })),
     setAllergies: (allergies) => set(() => ({ allergies: allergies })),
-    setSelectedType: (type) => set(() => ({ seletedType: type }))
+    setSelectedType: (type) => set(() => ({ seletedType: type })),
+    setSelectedPlan: (plan) => set(() => ({selectedPlan: plan}))
 }))
 
 export default useFormStore

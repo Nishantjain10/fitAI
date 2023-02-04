@@ -6,6 +6,7 @@ import useFormStore from '@/store/formStore';
 const StepForm1 = () => {
     
     const [age, setAge] = useFormStore(state => [state.age, state.setAge])
+    const [state, setHeight] = useFormStore(state => [state, state.setHeight])
 
     console.log(age)
 
