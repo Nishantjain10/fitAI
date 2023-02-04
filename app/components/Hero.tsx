@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Hero = () => {
   return (
     <div className="md:container md:mx-auto">
@@ -30,16 +32,16 @@ const Hero = () => {
       </div>
       <div className="hero-title backdrop-filter backdrop-blur-sm text-6xl pt-24 gap-6 font-product font-semibold flex flex-col justify-center items-center">
         <span className="">
-        Transform your fitness journey with {" "}
+          Transform your fitness journey with{" "}
           <span className=" text-violet-500 decoration-rose-400 font-bold underline-custom">
             {" "}
             FitAI{" "}
           </span>
         </span>
         <span>
-        The Perfect Fit for Your Perfect {" "}
+          The Perfect Fit for Your Perfect{" "}
           <span className="text-violet-500 text-6xl font-bold underline-custom">
-          Plans.{" "}
+            Plans.{" "}
           </span>
         </span>
         <p className="mt-4 text-xl w-[50%] mx-auto leading-8 text-gray-600 sm:text-center">
@@ -48,15 +50,15 @@ const Hero = () => {
           aliqua.
         </p>
         <div className="mt-12 flex gap-x-8 sm:justify-center">
-          <a
-            href="#"
+          <Link
+            href="/form"
             className="inline-block rounded-lg bg-violet-600 px-4 py-2 text-lg font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-violet-700 hover:ring-violet-700"
           >
-            Get started{" "}
+            Get started
             <span className="text-violet-200 font-bold" aria-hidden="true">
               &rarr;
             </span>
-          </a>
+          </Link>
           <a
             href="#"
             className="inline-block rounded-lg px-4 py-2 text-lg font-semibold leading-7 text-gray-900 ring-1 ring-gray-900/10 hover:ring-gray-900/20"
