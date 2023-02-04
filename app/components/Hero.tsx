@@ -31,14 +31,14 @@ const Hero = () => {
       <div className="hero-title backdrop-filter backdrop-blur-sm text-6xl pt-24 gap-6 font-product font-semibold flex flex-col justify-center items-center">
         <span className="">
         Transform your fitness journey with {" "}
-          <span className=" text-violet-500 decoration-rose-400 underline-custom">
+          <span className=" text-violet-500 decoration-rose-400 font-bold underline-custom">
             {" "}
-            FitAI:{" "}
+            FitAI{" "}
           </span>
         </span>
         <span>
         The Perfect Fit for Your Perfect {" "}
-          <span className="text-violet-500 text-6xl font-extrabold underline-custom">
+          <span className="text-violet-500 text-6xl font-bold underline-custom">
           Plans.{" "}
           </span>
         </span>

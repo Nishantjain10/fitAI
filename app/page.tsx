@@ -1,13 +1,20 @@
-import Image from 'next/image'
-import { Inter } from '@next/font/google'
-import styles from './page.module.css'
+"use client";
+import '@/app/globals.css'
+import About from "./components/About";
+import Trainer from "./components/Trainer";
+import Hero from "./components/Hero";
+import Testimonial from "./components/Testimonial";
+import Footer from "./components/Footer";
 
-const inter = Inter({ subsets: ['latin'] })
-
-export default function Home() {
+const HomePage = () => {
   return (
-    <h1 className="text-3xl font-bold text-blue-500 underline">
-    Hello world!
-  </h1>
-  )
-}
+    <div className="pt-24 text-center">
+        <Hero />
+        <About />
+        <Trainer />
+        <Testimonial />
+        <Footer />
+  </div>
+    );
+};
+export default HomePage;
