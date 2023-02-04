@@ -1,3 +1,4 @@
+
 "use client";
 import '@/app/globals.css'
 import About from "./components/About";
@@ -18,3 +19,4 @@ const HomePage = () => {
     );
 };
 export default HomePage;
+
