@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+
 @font-face {
     font-family: "Satoshi";
     src: url('../public/fonts/Satoshi.ttf');
@@ -23,4 +29,5 @@
     background-image: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/664131/underline.svg');
     background-repeat: no-repeat;
     background-size: cover;
+
 }
