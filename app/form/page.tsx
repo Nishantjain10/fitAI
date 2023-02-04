@@ -1,9 +1,12 @@
-import type { FC } from "react";
 
-interface pageProps {}
+import Container from './Container'
 
-const StepFormPage: FC<pageProps> = ({}) => {
-  return <div>step form page</div>;
-};
+const page = () => {
+    return (
+        <div>
+            <Container />
+        </div>
+    )
+}
 
-export default StepFormPage;
+export default page

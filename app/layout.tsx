@@ -1,13 +1,15 @@
+
 "use client";
 import './globals.css'
 import Navbar from "./components/Navbar";
 import alanBtn from "@alan-ai/alan-sdk-web";
 import { useState, useEffect } from "react";
 
+
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   const [login, setLogin] = useState(false);
   const ALAN_Key = `${process.env.NEXT_PUBLIC_ALAN_KEY!}`;   
@@ -40,6 +42,7 @@ export default function RootLayout({
   }, []);
   return (
     <html lang="en">
+
     <body>
       <Navbar />
       {children}
