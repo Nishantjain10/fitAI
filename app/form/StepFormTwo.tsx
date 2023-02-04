@@ -15,7 +15,6 @@ const StepForm2 = () => {
     const handleClick = (type: string) => {
         setSelectedType(type)
     }
-
     return (
         <ButtonGroup
 
