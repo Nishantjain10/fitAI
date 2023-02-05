@@ -10,7 +10,7 @@ const StepForm1 = () => {
   return (
     <div className=" p-20 ">
 
-      <div className='mb-10'>
+      <div className='mb-10 font-product'>
         <h1 className='text-3xl font-semibold leading-[2.8rem]'>Lorem ipsum dolor sit amet consectetur <br /> adipisicing elit.</h1>
         <p>Lorem ipsum dolor sit amet. Lorem, ipsum.</p>
       </div>

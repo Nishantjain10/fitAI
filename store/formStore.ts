@@ -49,6 +49,7 @@ const useFormOneStore = create<State & Actions>((set) => ({
   dietType: "",
   timeDuration: "",
   answer: "",
+  commandData: "",
 
   setAge: (age) => set(() => ({ age: age })),
   setHeight: (height) => set(() => ({ height: height })),

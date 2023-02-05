@@ -14,11 +14,11 @@ const StepForm3 = () => {
 
 
     return (
-        <div className='flex flex-col items-center justify-center gap-20'>
-            <h1 className='text-4xl font-bold'>What kind of plan do you want</h1>
+        <div className='flex flex-col items-center justify-center mt-52 gap-12 font-product'>
+            <h1 className='text-4xl font-bold'>What kind of plan do you want?</h1>
             <div className='flex items-center justify-center gap-10'>
-                <button className={` bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${state.selectedPlan === 'exercise' && 'bg-[red]'} text-black`} onClick={() => handleClick('exercise')}>Exercise</button>
-                <button className={` bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${state.selectedPlan === 'dietplan' && 'bg-[red]'} text-black`} onClick={() => handleClick('dietplan')} >Diet Plan</button>
+                <button className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${state.selectedPlan === 'dietplan' && 'bg-violet-500 text-white'}`} onClick={() => handleClick('dietplan')} >Diet Plan</button>
+                <button className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${state.selectedPlan === 'exercise' && 'bg-violet-500 text-white'}`} onClick={() => handleClick('exercise')}>Exercise Plan</button>
             </div>
         </div >
     )
