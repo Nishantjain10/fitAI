@@ -45,9 +45,7 @@ const Hero = () => {
           </span>
         </span>
         <p className="mt-4 text-xl w-[50%] mx-auto leading-8 text-gray-600 sm:text-center">
-          Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem
-          cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat
-          aliqua.
+          Customized workout and diet plans, powered by AI. Say goodbye to generic routines and hello to a virtual personal trainer that adapts to your progress and motivates you towards success.
         </p>
         <div className="mt-12 flex gap-x-8 sm:justify-center">
           <Link

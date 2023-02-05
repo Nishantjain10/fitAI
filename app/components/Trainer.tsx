@@ -38,10 +38,7 @@ const trainer = () => {
       </div>
 
       <p className="mt-12 text-violet-400 mx-auto w-[44%]">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
-          veritatis illo placeat harum porro optio fugit a culpa sunt id!
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
-          veritatis illo placeat harum porro optio fugit a culpa sunt id!
+      Maximize your potential with a professional trainer. At FitAI, our certified trainers will work with you to develop a comprehensive fitness plan tailored to your unique needs and goals. With expert guidance, personalized attention, and the support of our AI technology, you'll achieve your fitness aspirations faster and more effectively than ever before. Get started on your journey to a healthier, stronger you with FitAI.
         </p>
 
       <div className="card-wrapper mt-24 flex flex-row justify-center gap-20 items-center">

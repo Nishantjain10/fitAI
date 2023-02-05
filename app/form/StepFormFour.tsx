@@ -10,8 +10,8 @@ import { MenuItem, Select, SelectChangeEvent } from '@mui/material';
 
 const StepForm4 = () => {
 
-  const [timeDuration, setTimeDuration] = useFormOneStore(state => [
-    state.selectedPlan, state.timeDuration, state.setTimeDuration])
+  // const [timeDuration, setTimeDuration] = useFormOneStore(state => [
+  //   state.selectedPlan, state.timeDuration, state.setTimeDuration])
 
   const state = useFormOneStore()
 
@@ -35,6 +35,10 @@ const StepForm4 = () => {
 
   const handleDietType = (diet: string) => {
     state.setDietType(diet)
+  }
+
+  const handleDurationChange = (e: any) => {
+    state.setTimeDuration(e.target.value)
   }
 
   return (
@@ -104,9 +108,9 @@ const StepForm4 = () => {
           <Select
             labelId="demo-simple-select-label"
             id="demo-simple-select"
-            value={timeDuration}
+            value={state.timeDuration}
             label="Time Duration"
-            onChange={() => { }}
+            onChange={handleDurationChange}
             defaultValue={'Three Month'}
           >
             <MenuItem value={"One Month"}>One Months</MenuItem>
