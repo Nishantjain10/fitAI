@@ -7,7 +7,7 @@ import Image from "next/image";
 import { account } from "@/pages/api/appwriteConfig";
 import { useRouter } from "next/navigation";
 
-interface NavbarProps {}
+interface NavbarProps { }
 
 interface UserData {
   $id?: string;
@@ -16,7 +16,7 @@ interface UserData {
   emailVerification?: boolean;
   charAt?: string;
 }
-const Navbar: FC<NavbarProps> = ({}) => {
+const Navbar: FC<NavbarProps> = ({ }) => {
   const [activeButton, setActiveButton] = useState("");
   const [userDetails, setUserDetails] = useState<UserData>({});
   const router = useRouter();
@@ -93,12 +93,14 @@ const Navbar: FC<NavbarProps> = ({}) => {
               </button>
             </Link>
 
-            <button
-              className=" border border-hover:border-[#F3BC34] rounded-md px-3 py-2 hover:bg-violet-600 hover:text-white transition-all"
-              id="signup-button"
-            >
-              Signup
-            </button>
+            <Link href="/signup">
+              <button
+                className="bg-violet-600 text-white rounded-md px-4 py-2 hover:bg-violet-500 transition-all"
+                id="signup-button"
+              >
+                Sign Up
+              </button>
+            </Link>
           </div>
         )}
       </div>

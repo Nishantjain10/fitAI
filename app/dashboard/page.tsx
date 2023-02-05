@@ -7,6 +7,7 @@ import Link from "next/link";
 import GraphSvg from "public/images/github-contribution-grid-snake.svg";
 import Image from "next/image";
 import useFormOneStore from "@/store/formStore";
+import Loader from "../components/Loader";
 
 interface UserData {
   $id?: string;
@@ -47,6 +48,8 @@ const page: React.FC = () => {
   };
 
   const html = state?.answer?.replace(/\n/g, "<br>");
+
+
   return (
     <>
       {userDetails ? (
