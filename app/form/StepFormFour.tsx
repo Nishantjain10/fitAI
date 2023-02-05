@@ -42,21 +42,21 @@ const StepForm4 = () => {
 
       {state.selectedPlan === 'exercise' ? (
         <div className='font-product'>
-          <div>
+          <div className='flex flex-col justify-center items-center mt-12'>
             <h1 className='font-bold text-3xl'>Type of exercise</h1>
-            <ButtonGroup size="large" aria-label="large button group">
-              <Button className={` bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${state.exerciseType === 'homeworkout' && 'bg-[red]'} text-black`} onClick={() => handleExerciseType('homeworkout')}>Home workout</Button>
-              <Button className={` bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${state.exerciseType === 'calesthenics' && 'bg-[red]'} text-black`} onClick={() => handleExerciseType('calesthenics')}>Calesthenics</Button>
-              <Button className={` bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${state.exerciseType === 'weightlifting' && 'bg-[red]'} text-black`} onClick={() => handleExerciseType('weightlifting')}>Weight lifting</Button>
-              <Button className={` bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${state.exerciseType === 'yoga' && 'bg-[red]'} text-black`} onClick={() => handleExerciseType('yoga')}>Yoga</Button>
+            <ButtonGroup size="large" aria-label="large button group" className='mt-8 gap-2'>
+              <button className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${state.exerciseType === 'homeworkout' && 'bg-violet-500 text-white'} `} onClick={() => handleExerciseType('homeworkout')}>Home workout</button>
+              <button className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${state.exerciseType === 'calesthenics' && 'bg-violet-500 text-white'} `} onClick={() => handleExerciseType('calesthenics')}>Calesthenics</button>
+              <button className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${state.exerciseType === 'weightlifting' && 'bg-violet-500 text-white'} `} onClick={() => handleExerciseType('weightlifting')}>Weight lifting</button>
+              <button className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${state.exerciseType === 'yoga' && 'bg-violet-500 text-white'} `} onClick={() => handleExerciseType('yoga')}>Yoga</button>
             </ButtonGroup>
           </div>
-          <div>
+          <div className='flex flex-col justify-center items-center mt-12 mb-24'>
             <h1 className='text-3xl font-bold'>Experience</h1>
-            <ButtonGroup size='large' aria-label="large button group">
-              <Button className={` bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${state.exerciseExperience === 'beginner' && 'bg-[red]'} text-black`} onClick={() => handleExerciseExperience('beginner')}>Beginner</Button>
-              <Button className={` bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${state.exerciseExperience === 'Intermediate' && 'bg-[red]'} text-black`} onClick={() => handleExerciseExperience('Intermediate')}>Intermediate</Button>
-              <Button className={` bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ${state.exerciseExperience === 'Expert' && 'bg-[red]'} text-black`} onClick={() => handleExerciseExperience('Expert')}>Expert</Button>
+            <ButtonGroup size='large' aria-label="large button group" className='mt-8 gap-2'>
+              <button className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${state.exerciseExperience === 'beginner' && 'bg-violet-500 text-white'} `} onClick={() => handleExerciseExperience('beginner')}>Beginner</button>
+              <button className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${state.exerciseExperience === 'Intermediate' && 'bg-violet-500 text-white'} `} onClick={() => handleExerciseExperience('Intermediate')}>Intermediate</button>
+              <button className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${state.exerciseExperience === 'Expert' && 'bg-violet-500 text-white'} `} onClick={() => handleExerciseExperience('Expert')}>Expert</button>
             </ButtonGroup>
           </div>
         </div>
