@@ -5,25 +5,25 @@ const features = [
   {
     name: 'Competitive exchange rates',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Get the best deal for your money with competitive exchange rates. No hidden fees, no surprises.',
     icon: GlobeAltIcon,
   },
   {
     name: 'No hidden fees',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Say goodbye to unexpected fees and hidden charges. With us, what you see is what you get.',
     icon: ScaleIcon,
   },
   {
     name: 'Transfers are instant',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Experience fast and hassle-free transfers with our instant transfer service.',
     icon: BoltIcon,
   },
   {
     name: 'Mobile notifications',
     description:
-      'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.',
+      'Stay informed and on top of your transfers with mobile notifications. Get real-time updates on the go.',
     icon: DevicePhoneMobileIcon,
   },
 ]
@@ -33,11 +33,10 @@ const about = () => {
     <div className="bg-violet-600 font-product mt-60 pb-44 pt-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="sm:text-center">
-          <h2 className="text-lg font-semibold text-2xl leading-8 text-product-yellow">Fitness</h2>
+          <h2 className=" font-semibold text-2xl leading-8 text-product-yellow">Fitness</h2>
           <p className="mt-6 text-6xl text-white font-bold tracking-tight">A better way to improve your Health</p>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in
-            accusamus quisquam.
+            Take control of your health and reach your fitness goals with FitAI, your virtual personal trainer. With customized exercise and diet plans based on AI technology, you'll get the support you need to transform your health for the better.
           </p>
         </div>
 
