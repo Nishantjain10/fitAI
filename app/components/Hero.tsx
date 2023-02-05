@@ -1,6 +1,33 @@
+"use client";
+
 import Link from "next/link";
+import { account } from "@/pages/api/appwriteConfig";
+import { useEffect, useState } from "react";
+
+interface UserData {
+  $id?: string;
+  name?: string;
+  email?: string;
+  emailVerification?: boolean;
+  charAt?: string;
+}
 
 const Hero = () => {
+  const [userDetails, setUserDetails] = useState<UserData>({});
+
+  useEffect(() => {
+    const getData = account.get();
+    getData.then(
+      function (response: any) {
+        setUserDetails(response);
+      },
+      function (error: any) {
+        console.log(error);
+      }
+    );
+  }, []);
+
+
   return (
     <div className="md:container md:mx-auto">
       <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
@@ -51,7 +78,7 @@ const Hero = () => {
         </p>
         <div className="mt-12 flex gap-x-8 sm:justify-center">
           <Link
-            href="/form"
+            href={userDetails?.email ? "/form" : "/signup"}
             className="inline-block rounded-lg bg-violet-600 px-4 py-2 text-lg font-semibold leading-7 text-white shadow-sm ring-1 ring-indigo-600 hover:bg-violet-700 hover:ring-violet-700"
           >
             Get started
