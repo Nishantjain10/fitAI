@@ -15,6 +15,7 @@ type State = {
   dietType: string;
   timeDuration: string;
   answer: string;
+  loading: boolean
 };
 
 type Actions = {
@@ -32,6 +33,7 @@ type Actions = {
   setDietType: (type: string) => void;
   setTimeDuration: (time: string) => void;
   setAnswer: (answer: string) => void;
+  setLoading: (value: boolean) => void
 };
 
 const useFormOneStore = create<State & Actions>((set) => ({
@@ -50,6 +52,7 @@ const useFormOneStore = create<State & Actions>((set) => ({
   timeDuration: "",
   answer: "",
   commandData: "",
+  loading: false,
 
   setAge: (age) => set(() => ({ age: age })),
   setHeight: (height) => set(() => ({ height: height })),
@@ -65,6 +68,7 @@ const useFormOneStore = create<State & Actions>((set) => ({
   setDietType: (type) => set({ dietType: type }),
   setTimeDuration: (time) => set({ timeDuration: time }),
   setAnswer: (answer) => set(() => ({ answer: answer })),
+  setLoading: (value) => set(() => ({ loading: value }))
 }));
 
 export default useFormOneStore;

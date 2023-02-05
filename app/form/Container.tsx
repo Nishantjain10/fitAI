@@ -36,6 +36,7 @@ const Container = () => {
   let percentage = (formIndex / 4) * 100;
   const handleClick = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    state.setLoading(true)
     state.setAnswer("");
     if (state.weight === "") {
       alert("no data");
@@ -64,7 +65,7 @@ const Container = () => {
 
     console.log(results, "answer");
     state.setAnswer(results.result.choices[0].text);
-
+    state.setLoading(false)
     setTimeout(() => {
       route.push("/dashboard");
     }, 3000);

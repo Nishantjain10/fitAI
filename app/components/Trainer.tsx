@@ -1,3 +1,8 @@
+import trainerOne from 'public/images/trainerOne.jpg'
+import trainerTwo from 'public/images/trainerTwo.jpg'
+import trainerThree from 'public/images/trainerThree.jpg'
+import Image from 'next/image';
+
 const trainer = () => {
   return (
     <div id="trainers" className="md:container md:mx-auto hero-section py-32 font-product text-center">
@@ -8,29 +13,27 @@ const trainer = () => {
       </div>
       <div className="flex font-product flex-row mx-auto justify-center transition-all mt-36 gap-44 items-center ">
         <div className="flex flex-col justify-center items-center">
-          <img
-            className="rounded-full scale-x-[-1] w-52 h-52 border hover:border-product-yellow object-none object-[39%_-20px]"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNASoqI5fsyfMiRqiCv8cEjQgMot-fy26STtf1EDuXF1I3uSboi7wz-m1e8JlwtriqCpg&usqp=CAU"
-            alt=""
+          <Image
+            className="rounded-full  scale-x-[-1] w-[12rem] h-[12rem] border hover:border-product-yellow object-cover "
+            src={trainerOne}
+            alt="trainer_img"
           />
           <span className="text-lg font-medium mt-3">John Doe</span>
         </div>
 
-        <div className=" flex flex-col justify-center items-center">
-        <div className="w-80 h-80 rounded-full border border-product-yellow overflow-hidden flex flex-row justify-center items-center">
-          <img
-            className="  w-auto h-auto scale-125 "
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNASoqI5fsyfMiRqiCv8cEjQgMot-fy26STtf1EDuXF1I3uSboi7wz-m1e8JlwtriqCpg&usqp=CAU"
-            alt=""
+        <div className="flex flex-col justify-center items-center">
+          <Image
+            className="rounded-full  scale-x-[-1] w-[18rem] h-[18rem] border hover:border-product-yellow object-cover  "
+            src={trainerTwo}
+            alt="trainer_img"
           />
-        </div>
-          <span className="text-xl font-medium mt-3">John Doe</span>
+          <span className="text-lg font-medium mt-3">John Doe</span>
         </div>
 
         <div className="flex flex-col justify-center items-center">
-          <img
-            className="rounded-full w-52 h-52 border hover:border-[#F3BC34] object-none object-[39%_-20px]"
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNASoqI5fsyfMiRqiCv8cEjQgMot-fy26STtf1EDuXF1I3uSboi7wz-m1e8JlwtriqCpg&usqp=CAU"
+          <Image
+            className="rounded-full object-cover  w-[12rem] h-[12rem] border hover:border-[#F3BC34]  "
+            src={trainerThree}
             alt=""
           />
           <span className="text-lg font-medium mt-3">John Doe</span>
@@ -38,8 +41,8 @@ const trainer = () => {
       </div>
 
       <p className="mt-12 text-violet-400 mx-auto w-[44%]">
-      Maximize your potential with a professional trainer. At FitAI, our certified trainers will work with you to develop a comprehensive fitness plan tailored to your unique needs and goals. With expert guidance, personalized attention, and the support of our AI technology, you'll achieve your fitness aspirations faster and more effectively than ever before. Get started on your journey to a healthier, stronger you with FitAI.
-        </p>
+        Maximize your potential with a professional trainer. At FitAI, our certified trainers will work with you to develop a comprehensive fitness plan tailored to your unique needs and goals. With expert guidance, personalized attention, and the support of our AI technology, you'll achieve your fitness aspirations faster and more effectively than ever before. Get started on your journey to a healthier, stronger you with FitAI.
+      </p>
 
       <div className="card-wrapper mt-24 flex flex-row justify-center gap-20 items-center">
         <div className="w-80 p-4 bg-white shadow-lg border border-product-yellow rounded-2xl ">
