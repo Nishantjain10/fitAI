@@ -36,7 +36,8 @@ const Container = () => {
   let percentage = (formIndex / 4) * 100;
   const handleClick = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-    state.setLoading(true)
+    state.setLoading(true);
+    route.push("/dashboard");
     state.setAnswer("");
     if (state.weight === "") {
       alert("no data");
@@ -65,10 +66,7 @@ const Container = () => {
 
     console.log(results, "answer");
     state.setAnswer(results.result.choices[0].text);
-    state.setLoading(false)
-    setTimeout(() => {
-      route.push("/dashboard");
-    }, 3000);
+    state.setLoading(false);
   };
 
   return (
@@ -102,14 +100,14 @@ const Container = () => {
 
       <div className=" bg-violet-500 text-white font-product flex-col w-[10em] flex items-center justify-center  font-bold text-5xl ">
         <h1>Progress</h1>
-        <div style={{ width: 200, height: 200 }} className = "mt-12">
+        <div style={{ width: 200, height: 200 }} className="mt-12">
           <CircularProgressbar
             value={percentage}
             text={`${percentage}%`}
             styles={buildStyles({
-              trailColor: '#fff',
-              pathColor: '#F3BC34',
-              textColor: '#fff',
+              trailColor: "#fff",
+              pathColor: "#F3BC34",
+              textColor: "#fff",
               pathTransitionDuration: 0.8,
             })}
           />
