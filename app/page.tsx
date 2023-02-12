@@ -9,13 +9,13 @@ import Footer from "./components/Footer";
 
 const HomePage = () => {
   return (
-    <div className="pt-24 text-center">
+    <div className="text-center">
         <Hero />
         <About />
         <Trainer />
         <Testimonial />
         <Footer />
-  </div>
+    </div>
     );
 };
 export default HomePage;

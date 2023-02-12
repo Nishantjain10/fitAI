@@ -36,29 +36,33 @@ const testimonial = () => {
         };
       }, []);
   return (
-  <section className="testimonial-section bg-violet-600 font-product py-32">
-    <div className='title flex flex-row justify-center items-center'><h2 className="mt-2 text-6xl text-white font-bold tracking-tight">Testimonials</h2></div>        
+  <section className="testimonial-section font-product pt-44 py-6">
+    <div className='title flex flex-row justify-center items-center'>
+    <h2 className="mt-2 text-6xl font-extrabold tracking-tight w-[14ch] leading-tight"> Hear from our 
+    <span className='text-violet-500'> Satisfied Customers.
+      </span></h2></div>    
+  <div className='testimonial-cards mt-12'>   
   <div
-    className="mx-auto md:container px-4 py-16 sm:px-6 sm:py-24 lg:mr-0 lg:pl-8 lg:pr-0"
+    className="mx-auto  md:container px-4 py-24 sm:px-6 sm:py-24 lg:mr-0 lg:pl-8 lg:pr-0"
   >
     <div
       className="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16"
     >
-      <div className="max-w-xl text-center text-product-yellow sm:text-left">
+      <div className="max-w-xl text-center  sm:text-left">
         <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
           Don't just take our word for it...
           <br className="hidden sm:block lg:hidden" />
           Read reviews from our customers
         </h2>
 
-        <p className="mt-4 text-white">
+        <p className="mt-4 text-violet-600 font-medium">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas
           veritatis illo placeat harum porro optio fugit a culpa sunt id!
         </p>
 
         <div className="hidden lg:mt-8 lg:flex lg:gap-4  transition-all">
           <button
-            className="prev-button rounded-full border-2 border-white p-3 text-white hover:bg-white hover:text-violet-600"
+            className="prev-button rounded-full border-2 p-3  hover:bg-white hover:text-violet-600"
           >
             <span className="sr-only">Previous Slide</span>
             <svg
@@ -78,7 +82,7 @@ const testimonial = () => {
           </button>
 
           <button
-            className="next-button rounded-full border-2 border-white p-3 text-white hover:bg-white hover:text-violet-600"
+            className="next-button rounded-full border-2 p-3  hover:bg-white hover:text-violet-600"
           >
             <span className="sr-only">Next Slide</span>
             <svg
@@ -99,12 +103,12 @@ const testimonial = () => {
         </div>
       </div>
 
-      <div className="-mx-6 lg:col-span-2 lg:mx-0">
+      <div className="-mx-6 shadow-lg border border-gray-300 p-4 lg:col-span-2 lg:mx-0">
         <div className="swiper-container !overflow-hidden">
           <div className="swiper-wrapper">
             <div className="swiper-slide">
               <blockquote
-                className="flex h-full flex-col justify-between  border border-product-yellow bg-white  shadow-xl p-12"
+                className="flex h-full flex-col justify-between rounded-md border-2 border-violet-500 bg-white  shadow-xl p-12"
               >
                 <div>
                   <div className="flex gap-0.5 text-green-500">
@@ -186,7 +190,7 @@ const testimonial = () => {
 
             <div className="swiper-slide">
               <blockquote
-                className="flex h-full flex-col border border-product-yellow justify-between bg-white p-12"
+                className="flex h-full flex-col rounded-md border-2 border-violet-500 justify-between bg-white p-12"
               >
                 <div>
                   <div className="flex gap-0.5 text-green-500">
@@ -268,7 +272,7 @@ const testimonial = () => {
 
             <div className="swiper-slide">
               <blockquote
-                className="flex h-full flex-col border border-product-yellow justify-between bg-white p-12"
+                className="flex h-full flex-col rounded-md border-2 border-violet-500 justify-between bg-white p-12"
               >
                 <div>
                   <div className="flex gap-0.5 text-green-500">
@@ -355,7 +359,7 @@ const testimonial = () => {
     <div className="mt-8 flex justify-center gap-4 lg:hidden">
       <button
         aria-label="Previous slide"
-        className="prev-button rounded-full border border-pink-600 p-4 text-pink-600 hover:bg-pink-600 hover:text-white"
+        className="prev-button rounded-full rounded-md border-2 border-violet-500 p-4 text-pink-600 hover:bg-pink-600 hover:"
       >
         <svg
           className="h-5 w-5 -rotate-180 transform"
@@ -375,7 +379,7 @@ const testimonial = () => {
 
       <button
         aria-label="Next slide"
-        className="next-button rounded-full border border-pink-600 p-4 text-pink-600 hover:bg-pink-600 hover:text-white"
+        className="next-button rounded-full border border-pink-600 p-4 text-pink-600 hover:bg-pink-600 hover:"
       >
         <svg
           className="h-5 w-5"
@@ -393,6 +397,7 @@ const testimonial = () => {
         </svg>
       </button>
     </div>
+  </div>
   </div>
 </section>
 

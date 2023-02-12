@@ -46,7 +46,7 @@ const Navbar: FC<NavbarProps> = ({ }) => {
   console.log(userDetails);
 
   return (
-    <div className="md:container font-product md:mx-auto py-10 px-24 flex items-center justify-between">
+    <div className="navbar backdrop-blur-2xl back  font-product md:mx-auto py-10 px-24 flex items-center justify-between">
       <div className="text-4xl font-semibold flex flex-row justify-center items-center gap-1 text-violet-600">
         <Image className="w-10 h-10" src={fitAIimg} alt={""} />
         <a href="/">
@@ -86,7 +86,7 @@ const Navbar: FC<NavbarProps> = ({ }) => {
           <div className="flex items-center gap-12">
             <Link href="/login">
               <button
-                className="bg-violet-600 text-white rounded-md px-4 py-2 hover:bg-violet-500 transition-all"
+                className="border-2 border-violet-500 text-violet-500 rounded-md px-6 py-2  transition-all"
                 id="login-button"
               >
                 Login
