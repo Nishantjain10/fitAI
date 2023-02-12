@@ -5,9 +5,11 @@ import { useState, useEffect } from "react";
 import fitAIimg from "@/public/images/flexed-biceps_fitAI.png";
 import Image from "next/image";
 import { account } from "@/pages/api/appwriteConfig";
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 
-interface NavbarProps { }
+interface NavbarProps {
+  isLandingPage?: boolean;
+}
 
 interface UserData {
   $id?: string;
@@ -20,7 +22,8 @@ const Navbar: FC<NavbarProps> = ({ }) => {
   const [activeButton, setActiveButton] = useState("");
   const [userDetails, setUserDetails] = useState<UserData>({});
   const router = useRouter();
-
+  const pathname = usePathname();
+  const isLandingPage = pathname === '/'
   const handleLogout = async () => {
     try {
       await account.deleteSession("current");
@@ -46,7 +49,9 @@ const Navbar: FC<NavbarProps> = ({ }) => {
   console.log(userDetails);
 
   return (
-    <div className="navbar backdrop-blur-2xl back  font-product md:mx-auto py-10 px-24 flex items-center justify-between">
+    <div className={`navbar backdrop-blur-2xl back  font-product md:mx-auto py-10 px-24 flex items-center bg-cover bg-no-repeat justify-between ${
+      isLandingPage && 'bg-[url("../public/images/navbar-checks-bg.svg")]'
+    }`}>
       <div className="text-4xl font-semibold flex flex-row justify-center items-center gap-1 text-violet-600">
         <Image className="w-10 h-10" src={fitAIimg} alt={""} />
         <a href="/">
