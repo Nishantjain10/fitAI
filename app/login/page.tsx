@@ -18,7 +18,7 @@ const LoginPage: FC<pageProps> = ({}) => {
     e.preventDefault();
     try {
       await account.createEmailSession(user.email, user.password);
-      navigate.push("/dashboard");
+      navigate.push("/form");
     } catch (error) {
       console.log(error);
       alert(error);

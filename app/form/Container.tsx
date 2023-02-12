@@ -34,6 +34,8 @@ const Container = () => {
   const [formIndex, setFormIndex] = useState(0);
   const route = useRouter();
   let percentage = (formIndex / 4) * 100;
+
+  
   const handleClick = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     state.setLoading(true);
@@ -64,7 +66,6 @@ const Container = () => {
       },
     }).then((res) => res.json());
 
-    console.log(results, "answer");
     state.setAnswer(results.result.choices[0].text);
     state.setLoading(false);
   };

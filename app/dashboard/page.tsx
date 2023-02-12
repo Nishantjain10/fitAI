@@ -8,6 +8,7 @@ import GraphSvg from "public/images/github-contribution-grid-snake.svg";
 import Image from "next/image";
 import useFormOneStore from "@/store/formStore";
 import Loader from "../components/Loader";
+import Footer from "../components/Footer"
 
 interface UserData {
   $id?: string;
@@ -194,7 +195,6 @@ const page: React.FC = () => {
               </div>
             </div>
           </div>
-
           <div className="plans-section mt-32 font-product flex flex-col justify-center items-center">
             <h2 className="mt-2 text-6xl text-violet-500 font-bold tracking-tight">
               Track Progress
@@ -229,6 +229,24 @@ const page: React.FC = () => {
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </div>
+          <div className="font-product flex flex-row  py-12 items-center border-2 justify-center md:container md:mx-auto mt-12">
+              <div className="justify-self-center w-auto font-product font-medium">
+                <button className=" px-4 py-3 font-semibold rounded-md  bg-violet-600 text-white mx-8 mt-7 hover:scale-105 transition-all">
+                  Regenerate💫
+                </button>
+              </div>
+              <div className="justigy-self-start w-auto font-product font-medium">
+                <button className="rounded-md px-5 py-3 font-semibold  bg-violet-600 text-white mx-8 mt-7 hover:border hover:border-black  hover:scale-105 transition-all">
+                  Add your Diet🤩
+                </button>
+              </div>
+              <div className="justify-self-center w-auto font-product font-medium">
+                <button className="bg-lime-600 shadow-sm text-white px-4 py-3 font-semibold rounded-md mx-8 mt-7 hover:scale-105 transition-all">
+                  Share Profile🚀
+                </button>
+              </div>
+            </div>
+              <Footer />
         </>
       ) : (
         <p className="mt-4">

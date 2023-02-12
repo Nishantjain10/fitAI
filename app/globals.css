@@ -6,8 +6,32 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap');
 
+
+
+
 body {
     font-family: 'Roboto', sans-serif;
+}
+
+.about-section {
+    background-image: url("../public/images/Background\ Circle.png");
+    background-position: top right;
+    background-repeat: no-repeat;
+    @apply pt-24;
+}
+
+.hero-section {
+    background-image: url("../public/images/bggrid.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    @apply py-16;
+}
+
+
+.testimonial-cards {
+    background-image: url("../public/images/navbar-checks-bg.svg");
+    
+    @apply py-16;
 }
 
 @font-face {
