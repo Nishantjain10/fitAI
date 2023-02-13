@@ -18,6 +18,8 @@ const Container = () => {
     <StepFormFour />,
   ];
 
+  const [count, setCount] = useState(0);
+
   const handleRightClick = () => {
     setFormIndex((prev) => (prev < 3 ? prev + 1 : prev));
   };
@@ -41,6 +43,8 @@ const Container = () => {
     state.setLoading(true);
     route.push("/dashboard");
     state.setAnswer("");
+    setCount(count + 1);
+    console.log(setCount)
     if (state.weight === "") {
       alert("no data");
       return;
