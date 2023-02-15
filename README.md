@@ -3,7 +3,8 @@
 
 # FitAi (Stay Fit with Artificial Intelligence)
 # Built for HackThisFall
-![image](https://user-images.githubusercontent.com/89480234/216796567-c0922047-67a1-4897-a63c-cb15a2ae531d.png)
+![image](https://user-images.githubusercontent.com/89480234/219107614-d3ef91a2-d5ff-46f9-9e36-5f96014339c7.png)
+
 
 ## To check deployment, visit this link 👉 [FitAi](https://www.fitai.vercel.app/)
 
