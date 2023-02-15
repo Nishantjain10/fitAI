@@ -10,6 +10,7 @@ import "react-circular-progressbar/dist/styles.css";
 import { useRouter } from "next/navigation";
 import useFormOneStore from "@/store/formStore";
 
+
 const Container = () => {
   const forms = [
     <StepFormOne />,
@@ -18,24 +19,29 @@ const Container = () => {
     <StepFormFour />,
   ];
 
-  const [count, setCount] = useState(0);
-
+  
   const handleRightClick = () => {
     setFormIndex((prev) => (prev < 3 ? prev + 1 : prev));
   };
-
+  
   const handleLeftClick = () => {
     setFormIndex((prev) => (prev > 0 ? prev - 1 : prev));
   };
-
+  
   const changePercent = () => {
     percentage = 100;
   };
-
+  
   const state = useFormOneStore();
   const [formIndex, setFormIndex] = useState(0);
   const route = useRouter();
   let percentage = (formIndex / 4) * 100;
+  
+  const [count, setCount] = useState(0);
+  const handleButtonClick = () => {
+    setCount(count + 1);
+    console.log("working-handlebuttonclick");
+  };
 
   
   const handleClick = async (e: MouseEvent<HTMLButtonElement>) => {
@@ -43,12 +49,13 @@ const Container = () => {
     state.setLoading(true);
     route.push("/dashboard");
     state.setAnswer("");
-    setCount(count + 1);
-    console.log(setCount)
+    console.log("working-handleclick");
     if (state.weight === "") {
       alert("no data");
       return;
     }
+
+    
 
     const prompt = `You are given a user's data, now you gotta generate a ${state.timeDuration} ${state.selectedPlan} for that user that wants to ${state.selectedType} and has experience of ${state.exerciseExperience} in this
         weight: ${state.weight} \n
@@ -74,6 +81,14 @@ const Container = () => {
     state.setLoading(false);
   };
 
+
+  const handleCombinedClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    handleButtonClick();
+    handleClick(e);
+    console.log("working");
+  }
+
+  
   return (
     <div className="flex mx-auto my-[4em] border border-grey-900 shadow-md w-[100em]  h-[40em] overflow-hidden rounded-xl">
       <div className="my-0  h-full relative  flex-1 border-2   p-2">
@@ -81,7 +96,7 @@ const Container = () => {
 
         {formIndex === 3 ? (
           <button
-            onClick={handleClick}
+            onClick={handleCombinedClick}
             className="  absolute right-[90px] rounded-md bottom-10 cursor-pointer font-product font-medium bg-black px-4 py-2 text-white"
           >
             Finish
