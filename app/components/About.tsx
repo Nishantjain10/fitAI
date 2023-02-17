@@ -1,5 +1,10 @@
 
 import { BoltIcon, DevicePhoneMobileIcon, GlobeAltIcon, ScaleIcon } from '@heroicons/react/24/outline'
+import Image from "next/image";
+import fitnessIcon from "@/public/images/aboutSectionFour.svg"
+import fitnessIconSecond from "@/public/images/aboutSectionOne.svg"
+import fitnessIconThird from "@/public/images/aboutSectionTwo.svg"
+import fitnessIconFour from "@/public/images/aboutSectionThree.svg"
 
 const features = [
   {
@@ -44,22 +49,30 @@ const about = () => {
 
        <div className='pt-36 flex flex-col justify-center gap-20'>
         <div className='flex flex-row justify-around items-center'>
-        <div className='text-content flex flex-col justify-center items-center gap-2'>
-        <div className='border-2 border-violet-600 rounded-md w-[440px] h-[300px]'></div>
+        <div className='text-content flex flex-col justify-center items-center gap-4'>
+        <div className='border-2 border-violet-600 rounded-md w-[440px] h-[300px] flex justify-center items-center'>
+          <Image src={fitnessIcon} className = "w-[48%]" alt={''}></Image>
+        </div>
         <div className='w-[400px] text-2xl font-medium'>Transform Your Diet: Say goodbye to boring and unhealthy meals with our personalized nutrition plan.</div>
         </div>
-        <div className='text-content flex flex-col justify-center items-center gap-2'>
-        <div className='border-2 border-violet-600 rounded-md w-[440px] h-[300px]'></div>
+        <div className='text-content flex flex-col justify-center items-center gap-4'>
+        <div className='border-2 border-violet-600 rounded-md w-[440px] h-[300px] flex justify-center items-center'>
+        <Image src={fitnessIconSecond} className = "w-[58%] mt-8" alt={''}></Image>
+        </div>
         <div className='w-[420px] text-2xl font-medium'>Get Moving: Our exercise program is tailored to your fitness level and goals, keeping you motivated and on track.</div>
         </div>
         </div>
         <div className='flex flex-row justify-around items-center'>
-        <div className='text-content flex flex-col justify-center items-center gap-2'>
-        <div className='border-2 border-violet-600 rounded-md w-[440px] h-[300px]'></div>
+        <div className='text-content flex flex-col justify-center items-center gap-4'>
+        <div className='border-2 border-violet-600 rounded-md w-[440px] h-[300px] flex justify-center items-center'>
+        <Image src={fitnessIconThird} className = "w-[48%]" alt={''}></Image>
+        </div>
         <div className='w-[400px] text-2xl font-medium'>Track Your Progress: Monitor your progress and celebrate your wins with our easy-to-use tracking tools.</div>
         </div>
-        <div className='text-content flex flex-col justify-center items-center gap-2'>
-        <div className='border-2 border-violet-600 rounded-md w-[440px] h-[300px]'></div>
+        <div className='text-content flex flex-col justify-center items-center gap-4'>
+        <div className='border-2 border-violet-600 rounded-md w-[440px] h-[300px] flex justify-center items-center'>
+        <Image src={fitnessIconFour} className = "w-[48%]" alt={''}></Image>
+        </div>
         <div className='w-[400px] text-2xl font-medium'>Expert Support: Get the support you need from our team of certified health professionals, available 24/7.</div>
         </div>
         </div>
