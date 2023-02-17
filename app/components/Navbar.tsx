@@ -18,12 +18,12 @@ interface UserData {
   emailVerification?: boolean;
   charAt?: string;
 }
-const Navbar: FC<NavbarProps> = ({ }) => {
+const Navbar: FC<NavbarProps> = ({}) => {
   const [activeButton, setActiveButton] = useState("");
   const [userDetails, setUserDetails] = useState<UserData>({});
   const router = useRouter();
   const pathname = usePathname();
-  const isLandingPage = pathname === '/'
+  const isLandingPage = pathname === "/";
   const handleLogout = async () => {
     try {
       await account.deleteSession("current");
@@ -49,9 +49,11 @@ const Navbar: FC<NavbarProps> = ({ }) => {
   console.log(userDetails);
 
   return (
-    <div className={`navbar backdrop-blur-2xl back  font-product md:mx-auto py-10 px-24 flex items-center bg-cover bg-no-repeat justify-between ${
-      isLandingPage && 'bg-[url("../public/images/navbar-checks-bg.svg")]'
-    }`}>
+    <div
+      className={`navbar backdrop-blur-2xl back  font-product md:mx-auto py-10 px-24 flex items-center bg-cover bg-no-repeat justify-between ${
+        isLandingPage && 'bg-[url("../public/images/navbar-checks-bg.svg")]'
+      }`}
+    >
       <div className="text-4xl font-semibold flex flex-row justify-center items-center gap-1 text-violet-600">
         <Image className="w-10 h-10" src={fitAIimg} alt={""} />
         <a href="/">
