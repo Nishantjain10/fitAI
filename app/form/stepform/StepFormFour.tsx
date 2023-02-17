@@ -9,16 +9,7 @@ import Input from "@mui/material/Input";
 import { MenuItem, Select, SelectChangeEvent } from "@mui/material";
 
 const StepForm4 = () => {
-  // const [timeDuration, setTimeDuration] = useFormOneStore(state => [
-  //   state.selectedPlan, state.timeDuration, state.setTimeDuration])
-
   const state = useFormOneStore();
-
-  // const handleTimeDuration = (e: SelectChangeEvent) => {
-  //   setTimeDuration(e.target.value)
-  // }
-
-  console.log(state.timeDuration);
 
   const handleExerciseType = (type: string) => {
     state.setExerciseType(type);
