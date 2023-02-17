@@ -84,7 +84,7 @@ const Container = () => {
           </button>
         ) : (
           <button
-            className=" absolute right-[90px] bottom-10 bg-violet-500 hover:bg-violet-600 text-white font-product font-medium rounded-md px-4 py-2 hover:bg-violet-500 transition-all"
+            className=" absolute right-[90px] bottom-10 bg-violet-500 hover:bg-violet-600 text-white font-product font-medium rounded-md px-4 py-2 transition-all"
             onClick={handleRightClick}
           >
             Next
