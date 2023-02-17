@@ -11,22 +11,8 @@ interface pageProps {}
 
 const SignUpPage: FC<pageProps> = ({}) => {
   //AlanAI
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const ALAN_Key = `${process.env.NEXT_PUBLIC_ALAN_KEY!}`;
-  useEffect(() => {
-    // if (typeof window !== "undefined")
-    //   alanBtn({
-    //     key: ALAN_Key,
-    //     onCommand: (commandData) => {
-    //       //@ts-ignore
-    //       if(commandData.command === 'name'){
-    //         //@ts-ignore
-    //         setName(commandData.data)
-    //       }
-    //     },
-    //   });
-  }, []);
-
 
   //Appwrite
   const navigate = useRouter();
@@ -37,7 +23,7 @@ const SignUpPage: FC<pageProps> = ({}) => {
   });
 
   //Signup
-  const signupUser = async (e: { preventDefault: () => void; }) => {
+  const signupUser = async (e: { preventDefault: () => void }) => {
     e.preventDefault();
 
     const promise = account.create(
@@ -55,16 +41,17 @@ const SignUpPage: FC<pageProps> = ({}) => {
       },
       function (error: any) {
         console.log(error);
-        alert(error) // Failure
+        alert(error); // Failure
       }
     );
   };
 
-
   return (
-<>
+    <>
       <div className="min-h-full flex flex-col font-product justify-center py-12 sm:px-6 lg:px-8">
-        <div className="text-center text-violet-600 text-2xl font-bold">Sign up</div>
+        <div className="text-center text-violet-600 text-2xl font-bold">
+          Sign up
+        </div>
         <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
           <div className="bg-white py-8 px-4 shadow-md sm:rounded-lg sm:px-10">
             <form className="space-y-6" action="#" method="POST">
@@ -85,11 +72,10 @@ const SignUpPage: FC<pageProps> = ({}) => {
                     required
                     className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     onChange={(e) => {
-                        setUser({
-                            ...user,
-                            name: e.target.value
-                        });
-                  
+                      setUser({
+                        ...user,
+                        name: e.target.value,
+                      });
                     }}
                   />
                 </div>
@@ -108,12 +94,12 @@ const SignUpPage: FC<pageProps> = ({}) => {
                     type="email"
                     className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     onChange={(e) => {
-                        setUser({
-                            ...user,
-                            email: e.target.value
-                        })
+                      setUser({
+                        ...user,
+                        email: e.target.value,
+                      });
                     }}
-                    />
+                  />
                 </div>
               </div>
 
@@ -133,10 +119,10 @@ const SignUpPage: FC<pageProps> = ({}) => {
                     required
                     className="appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm placeholder-gray-400 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
                     onChange={(e) => {
-                        setUser({
-                            ...user,
-                            password: e.target.value
-                        })
+                      setUser({
+                        ...user,
+                        password: e.target.value,
+                      });
                     }}
                   />
                 </div>
@@ -229,8 +215,8 @@ const SignUpPage: FC<pageProps> = ({}) => {
           </div>
         </div>
       </div>
-</>
-  ) 
+    </>
+  );
 };
 
 export default SignUpPage;

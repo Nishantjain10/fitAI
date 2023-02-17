@@ -1,12 +1,11 @@
-
-import Container from './Container'
+import Container from "./Container";
 
 const page = () => {
-    return (
-        <div>
-            <Container />
-        </div>
-    )
-}
+  return (
+    <div>
+      <Container />
+    </div>
+  );
+};
 
-export default page
+export default page;

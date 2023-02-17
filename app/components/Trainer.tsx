@@ -1,19 +1,23 @@
-import trainerOne from 'public/images/trainerOne.jpg'
-import trainerTwo from 'public/images/trainerTwo.jpg'
-import trainerThree from 'public/images/trainerThree.jpg'
-import Image from 'next/image';
+import trainerOne from "public/images/trainerOne.jpg";
+import trainerTwo from "public/images/trainerTwo.jpg";
+import trainerThree from "public/images/trainerThree.jpg";
+import Image from "next/image";
 
 const trainer = () => {
   return (
-    <div id="trainers" className=" md:mx-auto py-24 font-product text-center gap-2">
+    <div
+      id="trainers"
+      className=" md:mx-auto py-24 font-product text-center gap-2"
+    >
       <div className="title flex flex-col justify-center items-center">
         <h2 className="mt-2 text-6xl font-extrabold w-[20ch] tracking-tight">
-        Maximize your potential with a 
-        <span className='text-violet-500'> professional trainer.</span>
+          Maximize your potential with a
+          <span className="text-violet-500"> professional trainer.</span>
         </h2>
-      <p className="mt-8 text-xl mx-auto w-[26%]">
-      At FitAI, our certified trainers will work with you to develop a comprehensive fitness plan tailored to your unique needs and goals. 
-      </p>
+        <p className="mt-8 text-xl mx-auto w-[26%]">
+          At FitAI, our certified trainers will work with you to develop a
+          comprehensive fitness plan tailored to your unique needs and goals.
+        </p>
       </div>
       <div className="flex font-product flex-row mx-auto justify-center transition-all mt-24 gap-44 items-center ">
         <div className="flex flex-col justify-center items-center">
@@ -22,7 +26,9 @@ const trainer = () => {
             src={trainerOne}
             alt="trainer_img"
           />
-          <span className="text-xl font-medium mt-6 text-violet-500">John Doe</span>
+          <span className="text-xl font-medium mt-6 text-violet-500">
+            John Doe
+          </span>
         </div>
 
         <div className="flex flex-col justify-center items-center">
@@ -31,7 +37,9 @@ const trainer = () => {
             src={trainerTwo}
             alt="trainer_img"
           />
-          <span className="text-2xl font-medium mt-6 text-violet-500">John Doe</span>
+          <span className="text-2xl font-medium mt-6 text-violet-500">
+            John Doe
+          </span>
         </div>
 
         <div className="flex flex-col justify-center items-center">
@@ -40,7 +48,9 @@ const trainer = () => {
             src={trainerThree}
             alt=""
           />
-          <span className="text-xl font-medium mt-6 text-violet-500">John Doe</span>
+          <span className="text-xl font-medium mt-6 text-violet-500">
+            John Doe
+          </span>
         </div>
       </div>
     </div>
