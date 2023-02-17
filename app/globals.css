@@ -30,7 +30,7 @@ body {
 
 .testimonial-cards {
     background-image: url("../public/images/navbar-checks-bg.svg");
-    
+
     @apply py-16;
 }
 
@@ -56,6 +56,7 @@ body {
     background-size: cover;
 
 }
+
 .isActiveButton:active {
     background-color: aqua;
 }
