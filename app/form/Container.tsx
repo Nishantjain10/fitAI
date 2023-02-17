@@ -18,10 +18,12 @@ const Container = () => {
     <StepFormFour />,
   ];
 
+  // navigating to the next stepform
   const handleRightClick = () => {
     setFormIndex((prev) => (prev < 3 ? prev + 1 : prev));
   };
 
+  // navigating to the prev stepform
   const handleLeftClick = () => {
     setFormIndex((prev) => (prev > 0 ? prev - 1 : prev));
   };
@@ -35,6 +37,7 @@ const Container = () => {
   const route = useRouter();
   let percentage = (formIndex / 4) * 100;
 
+  // sends a POST request to a openAI server with a prompt and store the result in answer state
   const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     state.setLoading(true);
