@@ -1,10 +1,10 @@
 "use client";
 
 import React, { MouseEvent, useState } from "react";
-import StepFormOne from "./StepFormOne";
-import StepFormTwo from "./StepFormTwo";
-import StepFormThree from "./StepFormThree";
-import StepFormFour from "./StepFormFour";
+import StepFormOne from "./stepform/StepFormOne";
+import StepFormTwo from "./stepform/StepFormTwo";
+import StepFormThree from "./stepform/StepFormThree";
+import StepFormFour from "./stepform/StepFormFour";
 import { buildStyles, CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { useRouter } from "next/navigation";
@@ -36,7 +36,7 @@ const Container = () => {
   let percentage = (formIndex / 4) * 100;
 
   
-  const handleClick = async (e: MouseEvent<HTMLButtonElement>) => {
+  const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     state.setLoading(true);
     route.push("/dashboard");
@@ -77,7 +77,7 @@ const Container = () => {
 
         {formIndex === 3 ? (
           <button
-            onClick={handleClick}
+            onClick={handleSubmit}
             className="  absolute right-[90px] rounded-md bottom-10 cursor-pointer font-product font-medium bg-black px-4 py-2 text-white"
           >
             Finish
