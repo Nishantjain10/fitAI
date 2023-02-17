@@ -48,6 +48,7 @@ const page: React.FC = () => {
     }
   };
 
+  // replaces all newline characters with HTML line break tags
   const html = state?.answer?.replace(/\n/g, "<br>");
 
   return (
