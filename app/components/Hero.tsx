@@ -19,6 +19,7 @@ interface UserData {
 const Hero = () => {
   const [userDetails, setUserDetails] = useState<UserData>({});
 
+  // fetching user data
   useEffect(() => {
     const getData = account.get();
     getData.then(

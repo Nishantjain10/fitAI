@@ -24,6 +24,8 @@ const Navbar: FC<NavbarProps> = ({}) => {
   const router = useRouter();
   const pathname = usePathname();
   const isLandingPage = pathname === "/";
+
+  // function for logging signed user out
   const handleLogout = async () => {
     try {
       await account.deleteSession("current");
@@ -34,6 +36,7 @@ const Navbar: FC<NavbarProps> = ({}) => {
     }
   };
 
+  // fetching user data
   useEffect(() => {
     const getData = account.get();
     getData.then(
@@ -45,8 +48,6 @@ const Navbar: FC<NavbarProps> = ({}) => {
       }
     );
   }, []);
-
-  console.log(userDetails);
 
   return (
     <div

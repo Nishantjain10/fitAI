@@ -5,6 +5,7 @@ import "swiper/css/pagination";
 import { useEffect } from "react";
 
 const testimonial = () => {
+  // initilizes Swiper instance with breakpoints for different screen sizes
   useEffect(() => {
     const swiper = new Swiper(".swiper-container", {
       modules: [Navigation, Pagination],
