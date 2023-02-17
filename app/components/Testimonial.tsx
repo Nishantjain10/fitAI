@@ -320,7 +320,7 @@ const testimonial = () => {
           <div className="mt-8 flex justify-center gap-4 lg:hidden">
             <button
               aria-label="Previous slide"
-              className="prev-button rounded-full rounded-md border-2 border-violet-500 p-4 text-pink-600 hover:bg-pink-600 hover:"
+              className="prev-button rounded-full border-2 border-violet-500 p-4 text-pink-600 hover:bg-pink-600 hover:"
             >
               <svg
                 className="h-5 w-5 -rotate-180 transform"

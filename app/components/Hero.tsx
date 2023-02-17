@@ -47,7 +47,7 @@ const Hero = () => {
         <div className="mt-8 flex gap-x-8 sm:justify-center justify-center">
           <Link
             href={userDetails?.email ? "/form" : "/signup"}
-            className="z-10 inline-block rounded-md text-black px-5 py-3 text-lg font-medium leading-7 border-2 text-black shadow-sm  border-violet-500  hover:border-violet-700"
+            className="z-10 inline-block rounded-md px-5 py-3 text-lg font-medium leading-7 border-2 text-black shadow-sm  border-violet-500  hover:border-violet-700"
           >
             Get started
             <span className="text-black font-bold ml-2" aria-hidden="true">
