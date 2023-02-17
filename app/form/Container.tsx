@@ -35,7 +35,6 @@ const Container = () => {
   const route = useRouter();
   let percentage = (formIndex / 4) * 100;
 
-  
   const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     state.setLoading(true);
