@@ -26,6 +26,7 @@ const page: React.FC = () => {
     firstLetter = userDetails.email.charAt(0).toUpperCase();
   }
 
+  // fetching user data
   useEffect(() => {
     const getData = account.get();
     getData.then(
