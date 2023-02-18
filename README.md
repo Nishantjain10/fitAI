@@ -1,4 +1,7 @@
-<center><img src="https://user-images.githubusercontent.com/89480234/219845279-7dc00515-a3d8-4dfd-a5ad-b3416ada1e3f.png" style="border-radius:18px; margin:0px 0px 20px"></center>
+<p align="center">
+</p>
+
+## FitAI (Built for HackThisFall)
 <blockquote> Get Fit with <b>FitAI<b>: Your Virtual Personal Trainer, powered by AI Technology. </blockquote>
 
 📃Table of contents:
@@ -104,7 +107,12 @@ npm install
 ```sh
 OPEN_API_KEY= 'YOUR OPENAI API KEY GOES HERE'
 ```
-- Get your openAi api key here: [OPENAI API](https://openai.com/api/)
+- Get your openAI api key here: [OPENAI API](https://openai.com/api/)
+  <br></br>
+```sh
+NEXT_PUBLIC_ALAN_KEY= 'YOUR ALAN AI API KEY GOES HERE'
+```
+- Get your Alan AI api key here: [ALANAI API](https://alan.app/docs/)
 
 5. Run the project on local machine
 
