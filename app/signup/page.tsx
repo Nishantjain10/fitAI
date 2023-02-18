@@ -13,7 +13,19 @@ const SignUpPage: FC<pageProps> = ({}) => {
   //AlanAI
   const [name, setName] = useState("");
   const ALAN_Key = `${process.env.NEXT_PUBLIC_ALAN_KEY!}`;
-
+  useEffect(() => {
+    // if (typeof window !== "undefined")
+    //   alanBtn({
+    //     key: ALAN_Key,
+    //     onCommand: (commandData) => {
+    //       //@ts-ignore
+    //       if(commandData.command === 'name'){
+    //         //@ts-ignore
+    //         setName(commandData.data)
+    //       }
+    //     },
+    //   });
+  }, []);
   //Appwrite
   const navigate = useRouter();
   const [user, setUser] = useState({
