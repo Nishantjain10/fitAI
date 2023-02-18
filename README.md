@@ -77,6 +77,9 @@ To begin with, first, we did User Research. Next, we created the user flow and f
 
 * To check deployment, visit this link 👉 [FitAi](https://www.fitai.vercel.app/)
 
+## 🎥Demo Video
+[Click Here to watch FitAI Website Demo Video](https://www.youtube.com/watch?v=Ux5V0gzRdSc)
+
 ## Installation
 
 > This project is built on nextJS 13 experimental version
