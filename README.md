@@ -1,7 +1,7 @@
 <p align="center">
 </p>
 
-## FitAI (Built for HackThisFall)
+## FitAI (Built at HackThisFall)
 <blockquote> Get Fit with <b>FitAI<b>: Your Virtual Personal Trainer, powered by AI Technology. </blockquote>
 
 📃Table of contents:
@@ -46,7 +46,7 @@ FitAI is a virtual personal trainer that generates personalized exercise and die
 ## 🏋️‍♀️Problem Statement 
 We live in an era where fitness is more important than ever before. With so many diets and workout routines, it's easy to get overwhelmed and miss out on the benefits of an active lifestyle. Our aim is to change that, by making fitness accessible and convenient for everyone.
 
-Tweet goes here... 
+
 
 ## 🍎The Solution
 FitAI is an AI-powered platform that revolutionizes the way we workout. It is designed to cater to your individual needs and provides personalized workout plans based on your fitness goals, schedule and preferences.
