@@ -47,7 +47,7 @@ const Container = () => {
       alert("no data");
       return;
     }
-    
+
     // constructing a prompt message with user data for OpenAI
     const prompt = `You are given a user's data, now you gotta generate a ${state.timeDuration} ${state.selectedPlan} for that user that wants to ${state.selectedType} and has experience of ${state.exerciseExperience} in this
         weight: ${state.weight} \n
@@ -117,7 +117,7 @@ const Container = () => {
           />
         </div>
 
-        <h1 className="text-xl mt-20 ">Lorem ipsum dolor sit amet.</h1>
+        <h1 className="text-xl mt-20 ">Track Your Progress</h1>
       </div>
     </div>
   );
