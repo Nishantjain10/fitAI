@@ -111,7 +111,7 @@ const footer = () => {
           © 2023 <a href="https://flowbite.com/">Flowbite™</a>. All Rights
           Reserved.
         </span>
-        <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0">
+        <div className="flex mt-4 space-x-6 sm:justify-center md:mt-0 max-sm:justify-center">
           <a href="#" className="text-violet-500 hover:text-violet-900">
             <svg
               className="w-5 h-5"

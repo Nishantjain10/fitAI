@@ -9,7 +9,7 @@ import Navbar from "./components/Navbar";
 
 const HomePage = () => {
   return (
-    <div className="text-center">
+    <div className="text-center  max-sm:overflow-hidden">
       <Hero />
       <About />
       <Trainer />

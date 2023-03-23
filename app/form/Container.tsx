@@ -74,20 +74,20 @@ const Container = () => {
   };
 
   return (
-    <div className="flex mx-auto my-[4em] border border-grey-900 shadow-md w-[100em]  h-[40em] overflow-hidden rounded-xl">
-      <div className="my-0  h-full relative  flex-1 border-2   p-2">
+    <div className="flex mx-auto my-[4em] border border-grey-900 shadow-md w-[100em]  h-[40em] overflow-hidden rounded-xl max-sm:flex-col max-sm:w-full max-sm:h-full max-sm:justify-center">
+      <div className="my-0  h-full relative  flex-1 border-2   p-2  max-sm:py-12">
         {forms[formIndex]}
 
         {formIndex === 3 ? (
           <button
             onClick={handleSubmit}
-            className="  absolute right-[90px] rounded-md bottom-10 cursor-pointer font-product font-medium bg-black px-4 py-2 text-white"
+            className="  absolute right-[90px] rounded-md bottom-10 cursor-pointer font-product font-medium bg-black px-4 py-2 text-white max-sm:py-3 max-sm:px-6 max-sm:bottom-2"
           >
             Finish
           </button>
         ) : (
           <button
-            className=" absolute right-[90px] bottom-10 bg-violet-500 hover:bg-violet-600 text-white font-product font-medium rounded-md px-4 py-2 transition-all"
+            className=" absolute right-[90px] bottom-10 bg-violet-500 hover:bg-violet-600 text-white font-product font-medium rounded-md px-4 py-2 transition-all max-sm:py-3 max-sm:px-6 max-sm:bottom-2"
             onClick={handleRightClick}
           >
             Next
@@ -95,14 +95,14 @@ const Container = () => {
         )}
 
         <button
-          className="absolute left-[90px] bottom-10 rounded-md cursor-pointer font-product bg-violet-500 hover:bg-violet-600 font-medium px-4 py-2 text-white"
+          className="absolute left-[90px] bottom-10 rounded-md cursor-pointer font-product bg-violet-500 hover:bg-violet-600 font-medium px-4 py-2 text-white max-sm:py-3 max-sm:px-6 max-sm:bottom-2"
           onClick={handleLeftClick}
         >
           Prev
         </button>
       </div>
 
-      <div className=" bg-violet-500 text-white font-product flex-col w-[10em] flex items-center justify-center  font-bold text-5xl ">
+      <div className=" bg-violet-500 text-white font-product flex-col w-[10em] flex items-center justify-center  font-bold text-5xl max-sm:w-full max-sm:mt-12 max-sm:py-24">
         <h1>Progress</h1>
         <div style={{ width: 200, height: 200 }} className="mt-12">
           <CircularProgressbar

@@ -55,7 +55,7 @@ const page: React.FC = () => {
     <>
       {userDetails ? (
         <>
-          <div className="md:container md:mx-auto shadow-xl font-product flex flex-row items-center justify-between py-3 px-4 mt-8 border border-black">
+          <div className="md:container md:mx-auto shadow-xl font-product flex flex-row items-center justify-between py-3 px-4 mt-8 border border-black max-sm:overflow-hidden">
             <div>
               <button
                 className="bg-[#FF4C6E] text-white p-2 rounded-md"
@@ -64,7 +64,7 @@ const page: React.FC = () => {
                 Logout
               </button>
             </div>
-            <div className="text-xl flex items-center gap-2">
+            <div className="text-xl flex items-center gap-2 max-sm:text-lg">
               <span> Hello, {userDetails.name}! </span>
               <div className="bg-violet-500 w-[50px] h-[50px] rounded-full flex justify-center items-center text-white">
                 {firstLetter}
@@ -176,7 +176,7 @@ const page: React.FC = () => {
               </div>
             </div>
 
-            <div className="font-product flex flex-row items-center justify-center md:container md:mx-auto mt-12">
+            <div className="font-product flex flex-row items-center justify-center md:container md:mx-auto mt-12 max-sm:flex-col max-sm:mt-4">
               <div className="justify-self-center w-auto font-product font-medium">
                 <button className=" px-4 py-3 font-semibold rounded-md  bg-black text-white mx-8 mt-7 hover:scale-105 transition-all">
                   Verify Number
@@ -196,15 +196,15 @@ const page: React.FC = () => {
             </div>
           </div>
           <div className="plans-section mt-32 font-product flex flex-col justify-center items-center">
-            <h2 className="mt-2 text-6xl text-violet-500 font-bold tracking-tight">
+            <h2 className="mt-2 text-6xl text-violet-500 font-bold tracking-tight max-sm:tracking-tighter max-sm:text-5xl">
               Track Progress
             </h2>
             <Image
-              className=" border border-violet-500 shadow-md mt-24 rounded-md  scale-125"
+              className=" border border-violet-500 shadow-md mt-24 rounded-md  scale-125 max-sm:hidden"
               src={GraphSvg}
               alt={""}
             ></Image>
-            <div className="w-[80ch] text-left text-base text-violet-700 font-medium md:mx-auto py-16">
+            <div className="w-[80ch] text-left text-base text-violet-700 font-medium md:mx-auto py-16 max-sm:w-[30ch] max-sm:text-center">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit.
               Laboriosam soluta doloremque amet corporis fugit unde, possimus
               laudantium similique delectus nostrum rem blanditiis error
@@ -225,11 +225,11 @@ const page: React.FC = () => {
               Saved Plans
             </h2>
             <div
-              className="w-[1300px] h-[600px] bg-white overflow-auto p-12 rounded-md mt-24 border-2 text-left border-black"
+              className="w-[1300px] h-[600px] bg-white overflow-auto p-12 rounded-md mt-24 border-2 text-left border-black max-sm:w-full max-sm:h-[800px]"
               dangerouslySetInnerHTML={{ __html: html }}
             />
           </div>
-          <div className="font-product flex flex-row  py-12 items-center border-2 justify-center md:container md:mx-auto mt-12">
+          <div className="font-product flex flex-row  py-12 items-center border-2 justify-center md:container md:mx-auto mt-12 max-sm:flex-col">
             <div className="justify-self-center w-auto font-product font-medium">
               <button className=" px-4 py-3 font-semibold rounded-md  bg-violet-600 text-white mx-8 mt-7 hover:scale-105 transition-all">
                 Regenerate💫

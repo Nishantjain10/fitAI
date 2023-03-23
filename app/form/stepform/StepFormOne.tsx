@@ -7,14 +7,14 @@ const StepForm1 = () => {
   const [state] = useFormOneStore((state) => [state]);
 
   return (
-    <div className=" p-20 ">
-      <div className="mb-10 font-product">
-        <h1 className="text-3xl font-semibold leading-[2.4rem] w-[30ch]">
+    <div className=" p-20 max-sm:mx-auto max-sm:p-8">
+      <div className="mb-10 font-product max-sm:flex max-sm:flex-col max-sm:justify-center">
+        <h1 className="text-3xl font-semibold leading-[2.4rem] w-[30ch] max-sm:w-[16ch] max-sm:text-2xl">
           Fill out our progress form to receive a customized diet plan.
         </h1>
         <p>Tailored to your unique needs and preferences.</p>
       </div>
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-2 gap-8 max-sm:grid-cols-1">
         <TextField
           required
           value={state.weight}

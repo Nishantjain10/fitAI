@@ -15,10 +15,10 @@ const StepForm2 = () => {
     setSelectedType(type);
   };
   return (
-    <div className="font-product mx-auto w-fit flex flex-col items-center mt-52">
-      <h1 className="text-4xl font-bold">Choose your Fitness Plan:</h1>
+    <div className="font-product mx-auto w-fit flex flex-col items-center mt-52 max-sm:my-10 max-sm:pb-8">
+      <h1 className="text-4xl font-bold max-sm:text-center max-sm:w-[10ch]">Choose your Fitness Plan:</h1>
       <div
-        className="flex items-center gap-5 mt-12 font-product"
+        className="flex items-center gap-5 mt-12 font-product max-sm:flex-col"
         aria-label="outlined primary button group"
       >
         <button

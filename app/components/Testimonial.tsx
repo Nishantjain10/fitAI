@@ -35,16 +35,16 @@ const testimonial = () => {
     };
   }, []);
   return (
-    <section className="testimonial-section font-product pt-44 py-6">
+    <section className="testimonial-section font-product pt-44 py-6 max-sm:pt-12">
       <div className="title flex flex-row justify-center items-center">
-        <h2 className="mt-2 text-6xl font-extrabold tracking-tight w-[14ch] leading-tight">
+        <h2 className="mt-2 text-6xl font-extrabold tracking-tight w-[14ch] leading-tight max-sm:text-4xl max-sm">
           {" "}
           Hear from our
           <span className="text-violet-500"> Satisfied Customers.</span>
         </h2>
       </div>
       <div className="testimonial-cards mt-12">
-        <div className="mx-auto  md:container px-4 py-24 sm:px-6 sm:py-24 lg:mr-0 lg:pl-8 lg:pr-0">
+        <div className="mx-auto  md:container px-4 py-24 sm:px-6 sm:py-24 lg:mr-0 lg:pl-8 lg:pr-0 max-sm:py-4">
           <div className="grid grid-cols-1 gap-y-8 lg:grid-cols-3 lg:items-center lg:gap-x-16">
             <div className="max-w-xl text-center  sm:text-left">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -321,7 +321,7 @@ const testimonial = () => {
           <div className="mt-8 flex justify-center gap-4 lg:hidden">
             <button
               aria-label="Previous slide"
-              className="prev-button rounded-full border-2 border-violet-500 p-4 text-pink-600 hover:bg-pink-600 hover:"
+              className="prev-button rounded-full border-2 p-4 hover:bg-white hover:text-violet-600"
             >
               <svg
                 className="h-5 w-5 -rotate-180 transform"
@@ -341,7 +341,7 @@ const testimonial = () => {
 
             <button
               aria-label="Next slide"
-              className="next-button rounded-full border border-pink-600 p-4 text-pink-600 hover:bg-pink-600 hover:"
+              className="next-button rounded-full border-2 p-4 hover:bg-white hover:text-violet-600"
             >
               <svg
                 className="h-5 w-5"
