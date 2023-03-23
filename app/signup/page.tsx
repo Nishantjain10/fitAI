@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import alanBtn from "@alan-ai/alan-sdk-web";
 import { v4 as uuidv4 } from "uuid";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 interface pageProps {}
 
@@ -152,6 +153,7 @@ const SignUpPage: FC<pageProps> = ({}) => {
             </form>
 
             <div className="mt-6">
+              <div className="form-content-wrapper ml-6 mx-6 my-6 text-sm text-center font-semibold font-manrope text-violet-600">Already have an account, Click here to <Link className="" href="/login"><button className="underline"> Login </button> </Link>💜</div>
               <div className="relative">
                 <div className="absolute inset-0 flex items-center">
                   <div className="w-full border-t border-gray-300" />

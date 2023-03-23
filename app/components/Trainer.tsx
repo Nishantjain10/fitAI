@@ -10,16 +10,16 @@ const trainer = () => {
       className=" md:mx-auto py-24 font-product text-center gap-2"
     >
       <div className="title flex flex-col justify-center items-center">
-        <h2 className="mt-2 text-6xl font-extrabold w-[20ch] tracking-tight">
+        <h2 className="mt-2 text-6xl font-extrabold w-[20ch] tracking-tight max-sm:text-4xl max-sm:w-[14ch]">
           Maximize your potential with a
           <span className="text-violet-500"> professional trainer.</span>
         </h2>
-        <p className="mt-8 text-xl mx-auto w-[26%]">
+        <p className="mt-8 text-xl mx-auto w-[26%] max-sm:text-lg max-sm:w-[30ch]">
           At FitAI, our certified trainers will work with you to develop a
           comprehensive fitness plan tailored to your unique needs and goals.
         </p>
       </div>
-      <div className="flex font-product flex-row mx-auto justify-center transition-all mt-24 gap-44 items-center ">
+      <div className="flex font-product flex-row mx-auto justify-center transition-all mt-24 gap-44 items-center max-sm:flex-col max-sm:gap-12 ">
         <div className="flex flex-col justify-center items-center">
           <Image
             className="rounded-full scale-x-[-1] w-[14rem] h-[14rem] border hover:border-product-yellow object-cover "

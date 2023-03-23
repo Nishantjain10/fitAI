@@ -33,14 +33,14 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="hero-section md:mx-auto">
-      <div className="hero-title text-7xl  pt-2 font-product gap-2 font-bold flex flex-col justify-center items-center">
+    <div className="hero-section md:mx-auto max-sm:bg-none">
+      <div className="hero-title text-7xl  pt-2 font-product gap-2 font-bold flex flex-col justify-center items-center max-sm:text-3xl">
         <span className="font-extrabold">Transform your</span>
         <span className="font-extrabold">
           fitness journey with{" "}
           <span className="text-violet-500 font-extrabold">FitAI.</span>
         </span>
-        <p className="mt-4 text-lg w-[551px] font-semibold mx-auto leading-8 text-gray-600 sm:text-center">
+        <p className="mt-4 text-lg w-[551px] font-semibold mx-auto leading-8 text-gray-600 sm:text-center max-sm:w-[340px]">
           Customized workout and diet plans, powered by AI. Say goodbye to
           generic routines and hello to a virtual personal trainer that adapts
           to your progress and motivates you towards success.
@@ -56,10 +56,10 @@ const Hero = () => {
             </span>
           </Link>
         </div>
-        <div className="flex flex-row justify-center -mt-10">
-          <Image src={dumbbell} className="w-[380px]" alt={""}></Image>
+        <div className="flex flex-row justify-center -mt-10 max-sm:mt-2">
+          <Image src={dumbbell} className="w-[380px] max-sm:w-[300px]" alt={""}></Image>
         </div>
-        <div className="flex flex-row justify-center -mt-10 hover:cursor-pointer">
+        <div className="flex flex-row justify-center -mt-10 hover:cursor-pointer max-sm:mt-2">
           <Image src={arrow} className="w-[50px]" alt={""}></Image>
         </div>
       </div>

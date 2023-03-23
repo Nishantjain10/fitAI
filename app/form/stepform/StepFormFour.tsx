@@ -40,7 +40,7 @@ const StepForm4 = () => {
             <ButtonGroup
               size="large"
               aria-label="large button group"
-              className="mt-8 gap-2"
+              className="mt-8 gap-2 max-sm:flex-col"
             >
               <button
                 className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${
@@ -84,7 +84,7 @@ const StepForm4 = () => {
             <ButtonGroup
               size="large"
               aria-label="large button group"
-              className="mt-8 gap-2"
+              className="mt-8 gap-2 max-sm:flex-col"
             >
               <button
                 className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${
@@ -117,15 +117,15 @@ const StepForm4 = () => {
           </div>
         </div>
       ) : (
-        <div className="font-product flex flex-col justify-center items-center mt-12">
+        <div className="font-product flex flex-col justify-center items-center mt-12 max-sm:mt-8">
           <div className="flex items-center flex-col">
-            <h1 className="text-3xl pb-4 font-bold">
+            <h1 className="text-3xl pb-4 font-bold max-sm:text-center max-sm:w-[12ch]">
               What do you prefer in eating?
             </h1>
             <ButtonGroup
               size="large"
               aria-label="large button group"
-              className="gap-2"
+              className="gap-2 max-sm:flex-col"
             >
               <button
                 className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${
@@ -180,12 +180,12 @@ const StepForm4 = () => {
             </FormControl>
           </div>
 
-          <div className="flex items-center flex-col">
+          <div className="flex items-center flex-col pb-20">
             <h1 className="text-3xl mt-8 px-8 font-bold">Type of Diet</h1>
             <ButtonGroup
               size="large"
               aria-label="large button group"
-              className="gap-2 mt-2 product-font"
+              className="gap-2 mt-2 product-font max-sm:flex-col "
             >
               <button
                 className={` bg-white hover:scale-105 transition-all border-2 border-black font-medium py-2 px-4 rounded-md ${
@@ -208,7 +208,7 @@ const StepForm4 = () => {
         </div>
       )}
 
-      <div className="mt-10 flex justify-center">
+      <div className="mt-10 flex justify-center max-sm:-mt-10 max-sm:pb-10">
         <FormControl sx={{ minWidth: "200px" }}>
           <InputLabel id="demo-simple-select-label">Time Duration</InputLabel>
           <Select
