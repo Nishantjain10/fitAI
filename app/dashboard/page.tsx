@@ -1,6 +1,5 @@
 "use client";
-
-import React, { useState, useEffect } from "react";
+import React, { MouseEvent, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { account } from "@/pages/api/appwriteConfig";
 import Link from "next/link";
@@ -8,6 +7,8 @@ import GraphSvg from "public/images/github-contribution-grid-snake.svg";
 import Image from "next/image";
 import useFormOneStore from "@/store/formStore";
 import Footer from "../components/Footer";
+import Container from "../form/Container";
+import { Toaster, toast } from "react-hot-toast";
 
 interface UserData {
   $id?: string;
@@ -20,6 +21,8 @@ interface UserData {
 const page: React.FC = () => {
   const [state] = useFormOneStore((state) => [state]);
   const router = useRouter();
+  const route = useRouter();
+  const [generatedBios, setGeneratedBios] = useState<String>("");
   const [userDetails, setUserDetails] = useState<UserData>({});
   let firstLetter = "";
   if (userDetails.email) {
@@ -47,9 +50,6 @@ const page: React.FC = () => {
       console.log(error);
     }
   };
-
-  // replaces all newline characters with HTML line break tags
-  const html = state?.answer?.replace(/\n/g, "<br>");
 
   return (
     <>
@@ -224,10 +224,39 @@ const page: React.FC = () => {
             <h2 className="mt-2 text-6xl text-white font-bold  tracking-tight">
               Saved Plans
             </h2>
-            <div
-              className="w-[1300px] h-[600px] bg-white overflow-auto p-12 rounded-md mt-24 border-2 text-left border-black"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+
+            <div className="space-y-10 my-10">
+              {generatedBios && (
+                <>
+                  <div>
+                    <h2 className="sm:text-4xl text-3xl font-bold text-slate-900 mx-auto">
+                      Your generated bios
+                    </h2>
+                  </div>
+                  <div className="space-y-8 flex flex-col items-center justify-center max-w-xl mx-auto">
+                    {generatedBios
+                      .substring(generatedBios.indexOf("1") + 3)
+                      .split("2.")
+                      .map((generatedBio) => {
+                        return (
+                          <div
+                            className="bg-white rounded-xl shadow-md p-4 hover:bg-gray-100 transition cursor-copy border"
+                            onClick={() => {
+                              navigator.clipboard.writeText(generatedBio);
+                              toast("Bio copied to clipboard", {
+                                icon: "✂️",
+                              });
+                            }}
+                            key={generatedBio}
+                          >
+                            <p>{generatedBio}</p>
+                          </div>
+                        );
+                      })}
+                  </div>
+                </>
+              )}
+            </div>
           </div>
           <div className="font-product flex flex-row  py-12 items-center border-2 justify-center md:container md:mx-auto mt-12">
             <div className="justify-self-center w-auto font-product font-medium">

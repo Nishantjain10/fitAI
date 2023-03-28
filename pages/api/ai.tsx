@@ -1,23 +1,37 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { Configuration, OpenAIApi } from "openai";
+import { OpenAIStream, OpenAIStreamPayload } from "./OpenAiStream";
 
-const configuration = new Configuration({
-  apiKey: process.env.OPEN_API_KEY,
-});
+if (!process.env.OPEN_API_KEY) {
+  throw new Error("Missing env var from OpenAI");
+}
 
-const openai = new OpenAIApi(configuration);
+export const config = {
+  runtime: "edge",
+};
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const completion = await openai.createCompletion({
+
+const handler = async (req: Request): Promise<Response> => {
+  const { prompt } = (await req.json()) as {
+    prompt?: string;
+  };
+
+  if (!prompt) {
+    return new Response("No prompt in the request", { status: 400 });
+  }
+
+  const payload: OpenAIStreamPayload = {
     model: "text-davinci-003",
-    prompt: req.body.prompt, // Text prompt to generate continuation from, passed in as a request body parameter
+    messages: [{ role: "user", content: prompt }],
     temperature: 1,
     top_p: 1,
     frequency_penalty: 0,
     presence_penalty: 0,
-    max_tokens: 256, // Maximum number of tokens to generate in the output text
-  });
+    max_tokens: 256,
+    stream: true,
+    n: 3,
+  };
 
-  // Send a response with a status code of 200 and the generated text as the response body
-  res.status(200).json({ result: completion.data });
+  const stream = await OpenAIStream(payload);
+  return new Response(stream);
 };
+
+export default handler;

@@ -33,20 +33,12 @@ const Container = () => {
   };
 
   const state = useFormOneStore();
+  const [generatedBios, setGeneratedBios] = useState<String>("");
   const [formIndex, setFormIndex] = useState(0);
   const route = useRouter();
   let percentage = (formIndex / 4) * 100;
 
-  // sends a POST request to a openAI server with a prompt and store the result in answer state
-  const handleSubmit = async (e: MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    state.setLoading(true);
-    route.push("/dashboard");
-    state.setAnswer("");
-    if (state.weight === "") {
-      alert("no data");
-      return;
-    }
+
 
     // constructing a prompt message with user data for OpenAI
     const prompt = `You are given a user's data, now you gotta generate a ${state.timeDuration} ${state.selectedPlan} for that user that wants to ${state.selectedType} and has experience of ${state.exerciseExperience} in this
@@ -59,19 +51,44 @@ const Container = () => {
         need a ${state.dietType}
         `;
 
-    const results = await fetch("/api/ai", {
-      method: "POST",
-      body: JSON.stringify({
-        prompt,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }).then((res) => res.json());
+        const generateBio = async (e: any) => {
+          e.preventDefault();
+          setGeneratedBios("");
+          state.setLoading(false);
+          const response = await fetch("/api/ai", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              prompt,
+            }),
+          });
 
-    state.setAnswer(results.result.choices[0].text);
-    state.setLoading(false);
-  };
+        
+          // This data is a ReadableStream
+          const data = response.body;
+          if (!data) {
+            return;
+          }
+        
+          const reader = data.getReader();
+          const decoder = new TextDecoder();
+          let done = false;
+        
+          while (!done) {
+            const { value, done: doneReading } = await reader.read();
+            done = doneReading;
+            const chunkValue = decoder.decode(value);
+            setGeneratedBios((prev) => prev + chunkValue);
+          }
+          route.push("/dashboard"); 
+          state.setLoading(false);
+          if (state.weight === "") {
+            alert("no data");
+            return;
+        }
+      };
 
   return (
     <div className="flex mx-auto my-[4em] border border-grey-900 shadow-md w-[100em]  h-[40em] overflow-hidden rounded-xl">
@@ -80,7 +97,7 @@ const Container = () => {
 
         {formIndex === 3 ? (
           <button
-            onClick={handleSubmit}
+            onClick={generateBio}
             className="  absolute right-[90px] rounded-md bottom-10 cursor-pointer font-product font-medium bg-black px-4 py-2 text-white"
           >
             Finish
