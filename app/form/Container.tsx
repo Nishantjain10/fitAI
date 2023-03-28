@@ -54,7 +54,7 @@ const Container = () => {
         const generateBio = async (e: any) => {
           e.preventDefault();
           setGeneratedBios("");
-          state.setLoading(false);
+          state.setLoading(true);
           const response = await fetch("/api/ai", {
             method: "POST",
             headers: {
