@@ -7,7 +7,7 @@ const database_key = process.env.REACT_APP_DATABASE_APPWRITE_API_KEY;
 
 // Set the endpoint URL and project ID for the client
 client
-  .setEndpoint("https://appwrite.vogueeco.us/v1")
+  .setEndpoint("https://cloud.appwrite.io/v1")
   .setProject("appwrite_api_key");
 
 // Create a new account instance using the client
