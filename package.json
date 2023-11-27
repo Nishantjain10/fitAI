@@ -10,22 +10,23 @@
   },
   "dependencies": {
     "@alan-ai/alan-sdk-web": "^1.8.42",
+    "styled-components": "^5.3.1",
     "@headlessui/react": "^1.7.9",
     "@heroicons/react": "^2.0.14",
-    "@emotion/react": "^11.10.5",
-    "@emotion/styled": "^11.10.5",
     "@mui/icons-material": "^5.11.0",
     "@mui/material": "^5.11.7",
     "@next/font": "13.1.6",
     "@types/node": "18.11.18",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
+    "ai": "^2.2.15",
     "appwrite": "^10.2.0",
     "eslint": "8.33.0",
     "eslint-config-next": "13.1.6",
     "marked": "^4.2.12",
     "next": "13.1.6",
-    "openai": "^3.1.0",
+    "openai": "^3.3.0",
+    "openai-edge": "^1.2.2",
     "react": "18.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "18.2.0",
@@ -34,12 +35,17 @@
     "uuid": "^9.0.0"
   },
   "devDependencies": {
-    "@types/uuid": "^9.0.0",
-    "typescript": "4.9.5",
-    "zustand": "^4.3.2",
     "@types/marked": "^4.0.8",
+    "@types/uuid": "^9.0.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.4",
+    "typescript": "4.9.5",
+    "zustand": "^4.3.2",
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest",
+    "@types/styled-components": "^5.1.14"
+  },
+  "resolutions": {
+    "@mui/styled-engine": "npm:@mui/styled-engine-sc@latest"
   }
 }
